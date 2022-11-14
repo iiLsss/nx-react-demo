@@ -1,8 +1,14 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "extends": ["plugin:prettier/recommended"],
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
   "plugins": ["@nrwl/nx", "prettier"],
+  "parserOptions": {
+    "parser": "babel-eslint"
+  },
+  "rules": {
+    "react/jsx-wrap-multilines": ["error", {"declaration": false, "assignment": false}]
+  },
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
@@ -45,4 +51,5 @@
       "rules": {}
     }
   ]
+
 }

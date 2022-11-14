@@ -1,18 +1,34 @@
 # nx react erpo
 
-1. 创建应用
+## 搭建
+
+#### 1. 创建应用（基于react）
 
 ```bash
-nx g @nrwl/react:app my-app
-```
-
-2. 添加库
+npx nx g @nrwl/react:app my-app
+✔ Would you like to add React Router to this application? (y/N) · true
 
 ```
-nx g @nrwl/react:lib my-lib
+
+**新增目录my-app**
+```
+└── apps
+    ├── my-app
+    └── my-app-e2e
 ```
 
-3. 创建 style 库
+#### 2. 添加库lib
+
+```
+npx nx g @nrwl/react:lib common-ui
+```
+
+```
+└── libs
+    └──common-ui
+```
+
+#### 3. 创建 style 库
 
 ```
 └── styles
@@ -22,7 +38,7 @@ nx g @nrwl/react:lib my-lib
         └── antd.less
 ```
 
-4. 项目中进行引用
+**项目中进行引用**
 
 **apps/store/src/project.json**
 
@@ -35,3 +51,6 @@ nx g @nrwl/react:lib my-lib
   }
 }
 ```
+
+#### 4
+
