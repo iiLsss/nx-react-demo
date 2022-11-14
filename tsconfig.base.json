@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@integrated-react-test/common-ui": ["libs/common-ui/src/index.ts"],
+      "@integrated-react-test/products": ["libs/products/src/index.ts"],
+      "@integrated-react-test/shared/my-feature-lib": [
+        "libs/shared/my-feature-lib/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

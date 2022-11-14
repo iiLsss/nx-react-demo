@@ -1,14 +1,24 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.less';
-import NxWelcome from './nx-welcome';
+import { Banner, Button } from '@integrated-react-test/common-ui'
+import { exampleProducts } from '@integrated-react-test/products'
+import { RouterProvider } from 'react-router-dom'
+import router from '../routes'
 
 export function App() {
   return (
     <>
-      <NxWelcome title="store" />
-      <div />
+      <RouterProvider router={router} />
+      <Banner text="welcome to the lsss" />
+      <ul>
+        {exampleProducts.map((product) => (
+          <li key={product.id}>
+            <strong>{product.name}</strong> Price: {product.price}
+          </li>
+        ))}
+      </ul>
+      <p className="font-orange"></p>
+      <Button type="primary">按钮</Button>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
