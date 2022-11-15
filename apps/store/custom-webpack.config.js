@@ -3,12 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = (config, context) => {
   return merge(config, {
-    plugins: [
-      new HtmlWebpackPlugin({
-        filename: (entryName) => entryName + '.html',
-        template: './src/index.html',
-        inject: true,
-      }),
-    ],
+    // plugins: [
+    //   new HtmlWebpackPlugin({
+    //     filename: (filename) => `${filename}.html`,
+    //     template: './src/index.html',
+    //     inject: true,
+    //   }),
+    // ],
   })
 }

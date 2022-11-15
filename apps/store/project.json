@@ -11,6 +11,7 @@
       "options": {
         "compiler": "babel",
         "outputPath": "dist/apps/store",
+        "generateIndexHtml": true,
         "index": "apps/store/src/index.html",
         "baseHref": "/",
         "main": "apps/store/src/main.tsx",
@@ -22,8 +23,7 @@
           "apps/store/src/styles.less"
         ],
         "scripts": [],
-        "webpackConfig": "apps/store/custom-webpack.config.js",
-        "generateIndexHtml": false
+        "webpackConfig": "apps/store/custom-webpack.config.js"
       },
       "configurations": {
         "development": {
@@ -46,6 +46,12 @@
           "extractLicenses": true,
           "vendorChunk": false
         }
+      }
+    },
+    "ls-project-root": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "ls apps/frontend/src"
       }
     },
     "serve": {

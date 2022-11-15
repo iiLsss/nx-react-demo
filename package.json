@@ -4,6 +4,8 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
+    "build:admin": "nx build admin",
+    "build:store": "nx build store",
     "build": "nx build",
     "test": "nx test",
     "format": "nx format"
@@ -13,6 +15,7 @@
     "antd": "^4.24.1",
     "classnames": "^2.3.2",
     "core-js": "^3.6.5",
+    "env-cmd": "^10.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router-dom": "6.4.1",
