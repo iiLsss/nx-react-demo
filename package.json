@@ -3,22 +3,25 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve",
-    "build:admin": "nx build admin",
-    "build:store": "nx build store",
+    "start": "nx run store:env-dev",
+    "build:admin": "nx build:admin",
+    "build:store": "nx run store:env-test",
     "build": "nx build",
     "test": "nx test",
     "format": "nx format"
   },
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.5",
     "antd": "^4.24.1",
     "classnames": "^2.3.2",
     "core-js": "^3.6.5",
     "env-cmd": "^10.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-redux": "8.0.2",
     "react-router-dom": "6.4.1",
+    "redux-saga": "^1.2.1",
     "regenerator-runtime": "0.13.7",
     "tslib": "^2.3.0"
   },

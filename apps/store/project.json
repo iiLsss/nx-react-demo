@@ -4,6 +4,36 @@
   "sourceRoot": "apps/store/src",
   "projectType": "application",
   "targets": {
+    "env-dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "nx serve"
+        ],
+        "envFile": "apps/store/.env.dev",
+        "parallel": false
+      }
+    },
+    "env-test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "nx build"
+        ],
+        "envFile": "apps/store/.env.test",
+        "parallel": false
+      }
+    },
+    "env-prod": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "nx build"
+        ],
+        "envFile": "apps/store/.env.prod",
+        "parallel": false
+      }
+    },
     "build": {
       "executor": "@nrwl/webpack:webpack",
       "outputs": ["{options.outputPath}"],
@@ -46,12 +76,6 @@
           "extractLicenses": true,
           "vendorChunk": false
         }
-      }
-    },
-    "ls-project-root": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "ls apps/frontend/src"
       }
     },
     "serve": {
