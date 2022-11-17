@@ -1,5 +1,5 @@
-import COURSE_ROUTE from './course'
-import { RouteObject } from 'react-router-dom'
+import COURSE_ROUTE from './router/course'
+import TODO_ROUTE from './router/todo'
 import type { SiderType } from '@integrated-react-test/common-ui'
 // type Route = RouteObject & { title?: string; children?: Route[] }
 
@@ -24,13 +24,7 @@ function filterElement(r: SiderType[], base = '') {
   return arr
 }
 
-const routers = [
-  {
-    path: 'course',
-    title: '课程管理',
-    children: COURSE_ROUTE,
-  },
-]
+const routers = [COURSE_ROUTE, TODO_ROUTE]
 
 export const routerList: SiderType[] = [
   { path: '/', title: '首页' },

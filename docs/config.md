@@ -2,8 +2,6 @@
 
 项目可以使用`package.json`进行配置(如果你使用npm脚本而不是nx执行器)。`package.json`和`project.json`文件都位于每个项目的文件夹中。Nx会合并两个文件的配置
 
-
-
 ## 定义环境变量
 
 https://nx.dev/recipes/environment-variables/define-environment-variables
