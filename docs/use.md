@@ -271,31 +271,3 @@ npm start
 ```
 
 > monorepo 雏形初见，基于antd二次封装。多个应用共同使用
-
-## 项目配置
-
-项目目录
-```
-.
-├── README.md
-├── apps
-│   ├── admin
-│   ├── admin-e2e
-│   ├── store
-│   └── store-e2e
-├── libs
-│   ├── common-ui
-│   ├── products
-│   └── shared
-├── tools
-│   ├── generators
-│   └── tsconfig.tools.json
-├── babel.config.json
-├── jest.config.ts
-├── jest.preset.js
-├── nx.json
-├── package-lock.json
-├── package.json
-└── tsconfig.base.json
-```
-

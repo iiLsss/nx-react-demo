@@ -32,3 +32,4 @@ Bazel 和 Nx（带插件）支持这种风格。
 package-based repos 和 integrated repos 之间的比较类似于 JSDoc 和 TypeScript 之间的比较。 前者更容易采用并提供一些好处。 后者需要更多的工作，但提供更多的价值，尤其是在更大的范围内。
 
 [心智模型](https://nx.dev/concepts/mental-model)
+
