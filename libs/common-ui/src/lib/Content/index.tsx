@@ -15,6 +15,7 @@ const App: FC<Props> = (props) => (
       className="site-layout-background"
       style={{
         minHeight: 300,
+        backgroundColor: '#fff',
       }}
     >
       {props.children}

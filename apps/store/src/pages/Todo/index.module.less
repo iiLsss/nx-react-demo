@@ -1,4 +1,21 @@
-.wrap{
+.todo-wall{
   margin: 0 auto;
-  width: 300px;
+  margin-top: 100px;
+  width: 400px;
+  .todo-input{
+    display: flex;
+    
+  }
+  .todo-list{
+    .finish{
+      text-decoration: line-through;
+    }
+    .icon-del{
+      margin-left: 12px;
+      cursor: pointer;
+      &:hover{
+        color: #7546c9;
+      }
+    }
+  }
 }

@@ -271,3 +271,30 @@ npm start
 ```
 
 > monorepo 雏形初见，基于antd二次封装。多个应用共同使用
+
+
+## 常用命令
+
+1. 基于react创建应用程序(业务代码库)
+```bash
+npx nx g @nrwl/react:app [project-name]
+```
+
+2. 创建js库
+
+```bash
+npx nx g @nrwl/js:lib [lib-name] 
+```
+
+3. 基于react创建组件库
+
+```bash
+npx nx g @nrwl/react:lib [component-lib-name] 
+```
+
+4. 基于组件库创建组件
+
+```bash
+npx nx g @nrwl/react:component [component-name] --project=[component-lib-name] --export
+```
+

@@ -12,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.8.0",
     "@reduxjs/toolkit": "^1.8.5",
     "antd": "^4.24.1",
     "classnames": "^2.3.2",
