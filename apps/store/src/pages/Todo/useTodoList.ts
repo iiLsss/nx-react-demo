@@ -1,10 +1,5 @@
 import { useState } from 'react'
-
-export type TodoItemType = {
-  id: number
-  todo: string
-  isFinished: boolean
-}
+import { TodoItemType } from '../../types/todo'
 
 const useTodoList = (initialValue: TodoItemType[]) => {
   const [list, setList] = useState(initialValue)

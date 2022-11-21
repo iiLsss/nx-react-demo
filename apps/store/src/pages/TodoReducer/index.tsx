@@ -4,8 +4,10 @@ import { DeleteOutlined } from '@ant-design/icons'
 import { Button } from '@integrated-react-test/common-ui'
 import style from './index.module.less'
 import useInputState from './useInputState'
-import useTodoList from './useTodoList'
 import { TodoItemType } from '../../types/todo'
+import { useSelector, useDispatch } from 'react-redux'
+import type { RootState } from '../../store'
+import { todoActions } from '../../store/todo'
 const cx = classnames.bind(style)
 
 const data: TodoItemType[] = [
@@ -22,16 +24,21 @@ const data: TodoItemType[] = [
 ]
 
 const Index = () => {
-  const { list, addTodoItem, deleteTodoItem, changeTodoItemStatus } =
-    useTodoList(data)
+  // const { list, addTodoItem, deleteTodoItem, changeTodoItemStatus } =
+  //   useTodoList(data)
+
+  const list = useSelector((state: RootState) => state.todo.todoList)
+  const dispatch = useDispatch()
   const { value, onChange, onReset } = useInputState()
 
   const handleAdd = () => {
-    addTodoItem({
-      id: new Date().valueOf(),
-      todo: value,
-      isFinished: false,
-    })
+    dispatch(
+      todoActions.addTodoItem({
+        id: new Date().valueOf(),
+        todo: value,
+        isFinished: false,
+      })
+    )
     onReset()
   }
 
@@ -54,10 +61,14 @@ const Index = () => {
                     <div>
                       <Checkbox
                         checked={item.isFinished}
-                        onChange={() => changeTodoItemStatus(item)}
+                        onChange={() =>
+                          dispatch(todoActions.changeItemStatus(item.id))
+                        }
                       />
                       <DeleteOutlined
-                        onClick={() => deleteTodoItem(item)}
+                        onClick={() =>
+                          dispatch(todoActions.deleteTodoItem(item.id))
+                        }
                         className={cx('icon-del')}
                       />
                     </div>
