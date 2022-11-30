@@ -1,8 +1,16 @@
 const { merge } = require('webpack-merge')
+const path = require('path')
 // const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = (config, context) => {
   const mergeConfig = merge(config, {
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, 'src/'),
+        // Utilities: path.resolve(__dirname, 'src/utilities/'),
+        // Templates: path.resolve(__dirname, 'src/templates/'),
+      },
+    },
     devServer: {
       proxy: {
         '/api': {
@@ -26,7 +34,8 @@ module.exports = (config, context) => {
     //   }),
     // ],
   })
-  // console.log(mergeConfig.output)
+  console.log(mergeConfig.module)
+  console.log(JSON.stringify(mergeConfig.module))
 
   return mergeConfig
 }

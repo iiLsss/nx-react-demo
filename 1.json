@@ -1,0 +1,455 @@
+{
+  "unsafeCache": true,
+  "rules": [
+    {
+      "test": {},
+      "type": "asset",
+      "parser": {
+        "dataUrlCondition": {
+          "maxSize": 10000
+        }
+      }
+    },
+    {
+      "test": {},
+      "resolve": {
+        "fullySpecified": false
+      }
+    },
+    {
+      "test": {},
+      "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/@nrwl/webpack/src/utils/web-babel-loader",
+      "exclude": {},
+      "options": {
+        "rootMode": "upward",
+        "cwd": "/Users/eeo/Documents/lsss/integrated-react-test/apps/store/src",
+        "emitDecoratorMetadata": true,
+        "isModern": false,
+        "envName": "production",
+        "babelrc": true,
+        "cacheDirectory": true,
+        "cacheCompression": false
+      }
+    },
+    {
+      "test": {},
+      "oneOf": [
+        {
+          "test": {},
+          "use": [
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/mini-css-extract-plugin/dist/loader.js"
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/css-loader/dist/cjs.js",
+              "options": {
+                "modules": {
+                  "mode": "local"
+                },
+                "importLoaders": 1
+              }
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/postcss-loader/dist/cjs.js",
+              "options": {}
+            }
+          ]
+        },
+        {
+          "test": {},
+          "use": [
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/mini-css-extract-plugin/dist/loader.js"
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/css-loader/dist/cjs.js",
+              "options": {
+                "modules": {
+                  "mode": "local"
+                },
+                "importLoaders": 1
+              }
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/postcss-loader/dist/cjs.js",
+              "options": {}
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/sass-loader/dist/cjs.js",
+              "options": {
+                "implementation": {
+                  "sassNull": {},
+                  "sassTrue": {
+                    "value": true
+                  },
+                  "sassFalse": {
+                    "value": false
+                  },
+                  "Logger": {
+                    "silent": {}
+                  },
+                  "info": "dart-sass\t1.56.1\t(Sass Compiler)\t[Dart]\ndart2js\t2.18.4\t(Dart Compiler)\t[Dart]",
+                  "types": {},
+                  "NULL": {},
+                  "TRUE": {
+                    "value": true
+                  },
+                  "FALSE": {
+                    "value": false
+                  }
+                },
+                "sassOptions": {
+                  "fiber": false,
+                  "precision": 8,
+                  "includePaths": [
+                    "/Users/eeo/Documents/lsss/integrated-react-test/libs/shared/styles"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "test": {},
+          "use": [
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/mini-css-extract-plugin/dist/loader.js"
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/css-loader/dist/cjs.js",
+              "options": {
+                "modules": {
+                  "mode": "local"
+                },
+                "importLoaders": 1
+              }
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/postcss-loader/dist/cjs.js",
+              "options": {}
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/less-loader/dist/cjs.js",
+              "options": {
+                "lessOptions": {
+                  "paths": [
+                    "/Users/eeo/Documents/lsss/integrated-react-test/libs/shared/styles"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "test": {},
+          "use": [
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/mini-css-extract-plugin/dist/loader.js"
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/css-loader/dist/cjs.js",
+              "options": {
+                "modules": {
+                  "mode": "local"
+                },
+                "importLoaders": 1
+              }
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/postcss-loader/dist/cjs.js",
+              "options": {}
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/stylus-loader/dist/cjs.js",
+              "options": {
+                "stylusOptions": {
+                  "include": [
+                    "/Users/eeo/Documents/lsss/integrated-react-test/libs/shared/styles"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "exclude": [
+            "/Users/eeo/Documents/lsss/integrated-react-test/libs/shared/styles/index.less",
+            "/Users/eeo/Documents/lsss/integrated-react-test/apps/store/src/styles.less"
+          ],
+          "test": {},
+          "use": [
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/style-loader/dist/cjs.js"
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/@nrwl/webpack/src/utils/webpack/plugins/raw-css-loader.js"
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/postcss-loader/dist/cjs.js",
+              "options": {}
+            }
+          ]
+        },
+        {
+          "exclude": [
+            "/Users/eeo/Documents/lsss/integrated-react-test/libs/shared/styles/index.less",
+            "/Users/eeo/Documents/lsss/integrated-react-test/apps/store/src/styles.less"
+          ],
+          "test": {},
+          "use": [
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/style-loader/dist/cjs.js"
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/@nrwl/webpack/src/utils/webpack/plugins/raw-css-loader.js"
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/postcss-loader/dist/cjs.js",
+              "options": {}
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/sass-loader/dist/cjs.js",
+              "options": {
+                "implementation": {
+                  "sassNull": {},
+                  "sassTrue": {
+                    "value": true
+                  },
+                  "sassFalse": {
+                    "value": false
+                  },
+                  "Logger": {
+                    "silent": {}
+                  },
+                  "info": "dart-sass\t1.56.1\t(Sass Compiler)\t[Dart]\ndart2js\t2.18.4\t(Dart Compiler)\t[Dart]",
+                  "types": {},
+                  "NULL": {},
+                  "TRUE": {
+                    "value": true
+                  },
+                  "FALSE": {
+                    "value": false
+                  }
+                },
+                "sourceMap": false,
+                "sassOptions": {
+                  "fiber": false,
+                  "precision": 8,
+                  "includePaths": [
+                    "/Users/eeo/Documents/lsss/integrated-react-test/libs/shared/styles"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "exclude": [
+            "/Users/eeo/Documents/lsss/integrated-react-test/libs/shared/styles/index.less",
+            "/Users/eeo/Documents/lsss/integrated-react-test/apps/store/src/styles.less"
+          ],
+          "test": {},
+          "use": [
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/style-loader/dist/cjs.js"
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/@nrwl/webpack/src/utils/webpack/plugins/raw-css-loader.js"
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/postcss-loader/dist/cjs.js",
+              "options": {}
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/less-loader/dist/cjs.js",
+              "options": {
+                "sourceMap": false,
+                "lessOptions": {
+                  "javascriptEnabled": true,
+                  "paths": [
+                    "/Users/eeo/Documents/lsss/integrated-react-test/libs/shared/styles"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "exclude": [
+            "/Users/eeo/Documents/lsss/integrated-react-test/libs/shared/styles/index.less",
+            "/Users/eeo/Documents/lsss/integrated-react-test/apps/store/src/styles.less"
+          ],
+          "test": {},
+          "use": [
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/style-loader/dist/cjs.js"
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/@nrwl/webpack/src/utils/webpack/plugins/raw-css-loader.js"
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/postcss-loader/dist/cjs.js",
+              "options": {}
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/stylus-loader/dist/cjs.js",
+              "options": {
+                "sourceMap": false,
+                "stylusOptions": {
+                  "include": [
+                    "/Users/eeo/Documents/lsss/integrated-react-test/libs/shared/styles"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "include": [
+            "/Users/eeo/Documents/lsss/integrated-react-test/libs/shared/styles/index.less",
+            "/Users/eeo/Documents/lsss/integrated-react-test/apps/store/src/styles.less"
+          ],
+          "test": {},
+          "use": [
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/mini-css-extract-plugin/dist/loader.js",
+              "options": {
+                "esModule": true
+              }
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/@nrwl/webpack/src/utils/webpack/plugins/raw-css-loader.js"
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/postcss-loader/dist/cjs.js",
+              "options": {}
+            }
+          ]
+        },
+        {
+          "include": [
+            "/Users/eeo/Documents/lsss/integrated-react-test/libs/shared/styles/index.less",
+            "/Users/eeo/Documents/lsss/integrated-react-test/apps/store/src/styles.less"
+          ],
+          "test": {},
+          "use": [
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/mini-css-extract-plugin/dist/loader.js",
+              "options": {
+                "esModule": true
+              }
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/@nrwl/webpack/src/utils/webpack/plugins/raw-css-loader.js"
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/postcss-loader/dist/cjs.js",
+              "options": {}
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/sass-loader/dist/cjs.js",
+              "options": {
+                "implementation": {
+                  "sassNull": {},
+                  "sassTrue": {
+                    "value": true
+                  },
+                  "sassFalse": {
+                    "value": false
+                  },
+                  "Logger": {
+                    "silent": {}
+                  },
+                  "info": "dart-sass\t1.56.1\t(Sass Compiler)\t[Dart]\ndart2js\t2.18.4\t(Dart Compiler)\t[Dart]",
+                  "types": {},
+                  "NULL": {},
+                  "TRUE": {
+                    "value": true
+                  },
+                  "FALSE": {
+                    "value": false
+                  }
+                },
+                "sourceMap": false,
+                "sassOptions": {
+                  "fiber": false,
+                  "precision": 8,
+                  "includePaths": [
+                    "/Users/eeo/Documents/lsss/integrated-react-test/libs/shared/styles"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "include": [
+            "/Users/eeo/Documents/lsss/integrated-react-test/libs/shared/styles/index.less",
+            "/Users/eeo/Documents/lsss/integrated-react-test/apps/store/src/styles.less"
+          ],
+          "test": {},
+          "use": [
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/mini-css-extract-plugin/dist/loader.js",
+              "options": {
+                "esModule": true
+              }
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/@nrwl/webpack/src/utils/webpack/plugins/raw-css-loader.js"
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/postcss-loader/dist/cjs.js",
+              "options": {}
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/less-loader/dist/cjs.js",
+              "options": {
+                "sourceMap": false,
+                "lessOptions": {
+                  "javascriptEnabled": true,
+                  "paths": [
+                    "/Users/eeo/Documents/lsss/integrated-react-test/libs/shared/styles"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "include": [
+            "/Users/eeo/Documents/lsss/integrated-react-test/libs/shared/styles/index.less",
+            "/Users/eeo/Documents/lsss/integrated-react-test/apps/store/src/styles.less"
+          ],
+          "test": {},
+          "use": [
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/mini-css-extract-plugin/dist/loader.js",
+              "options": {
+                "esModule": true
+              }
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/@nrwl/webpack/src/utils/webpack/plugins/raw-css-loader.js"
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/postcss-loader/dist/cjs.js",
+              "options": {}
+            },
+            {
+              "loader": "/Users/eeo/Documents/lsss/integrated-react-test/node_modules/stylus-loader/dist/cjs.js",
+              "options": {
+                "sourceMap": false,
+                "stylusOptions": {
+                  "include": [
+                    "/Users/eeo/Documents/lsss/integrated-react-test/libs/shared/styles"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 // import React from 'react'
 import { useAppSelector } from '../../store'
+
 const Index = () => {
   const { username, avatar } = useAppSelector((state) => state.user)
 
