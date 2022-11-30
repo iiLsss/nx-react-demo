@@ -4,31 +4,13 @@ import { DeleteOutlined } from '@ant-design/icons'
 import { Button } from '@integrated-react-test/common-ui'
 import style from './index.module.less'
 import useInputState from './useInputState'
-import { TodoItemType } from '../../types/todo'
-import { useSelector, useDispatch } from 'react-redux'
-import type { RootState } from '../../store'
+import { useAppDispatch, useAppSelector } from '../../store'
 import { todoActions } from '../../store/todo'
 const cx = classnames.bind(style)
 
-const data: TodoItemType[] = [
-  {
-    id: 1668667007120,
-    todo: 'Racing car sprays burning fuel into crowd.',
-    isFinished: false,
-  },
-  {
-    id: 1668667007121,
-    todo: 'Japanese princess to wed commoner.',
-    isFinished: false,
-  },
-]
-
 const Index = () => {
-  // const { list, addTodoItem, deleteTodoItem, changeTodoItemStatus } =
-  //   useTodoList(data)
-
-  const list = useSelector((state: RootState) => state.todo.todoList)
-  const dispatch = useDispatch()
+  const list = useAppSelector((state) => state.todo.todoList)
+  const dispatch = useAppDispatch()
   const { value, onChange, onReset } = useInputState()
 
   const handleAdd = () => {

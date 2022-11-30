@@ -1,16 +1,34 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import { getUserInfo } from '../../apis'
+// export interface UserState {
+//   username: string
+// }
 
-export interface UserState {
-  username: string
-}
+export const fetchUserInfo = createAsyncThunk(
+  'user/info',
+  async () => await getUserInfo()
+)
 
 export const userSlice = createSlice({
   name: 'user',
   initialState: {
     username: '',
+    avatar: '',
   },
   reducers: {},
-  // extraReducers(builder) {},
+  extraReducers(builder) {
+    builder.addCase(fetchUserInfo.pending, (state, action) => {
+      console.log(action)
+      // state.avatar =
+    })
+    builder.addCase(fetchUserInfo.fulfilled, (state, action) => {
+      console.log(action)
+      // state.avatar =
+    })
+  },
 })
 
-export const userAction = userSlice.actions
+export const userActions = userSlice.actions
+export const userReducer = userSlice.reducer
+
+export default userSlice
