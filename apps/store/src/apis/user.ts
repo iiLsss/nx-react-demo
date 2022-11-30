@@ -6,13 +6,15 @@ interface Response<T> {
   data: T
 }
 
+axios.defaults.baseURL = 'api'
 type GetUserInfo = () => Promise<Userinfo>
 
 export const getUserInfo: GetUserInfo = () => {
   return new Promise((resolve, reject) => {
     axios
       .get(
-        'https://mock.mengxuegu.com/mock/638450179433403d6c068829/nx/userinfo'
+        // 'https://mock.mengxuegu.com/mock/638450179433403d6c068829/nx/userinfo'
+        '/mock/638450179433403d6c068829/nx/userinfo'
       )
       .then((res: AxiosResponse<Response<Userinfo>, null>) => {
         if (res.data.code === API_CODE.SUCCESS) {

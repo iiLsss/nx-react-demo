@@ -6,7 +6,7 @@
     "start": "nx run store:env-dev",
     "dev:store": "nx run store:env-dev",
     "dev:admin": "nx run admin:serve",
-    "build:admin": "nx build:admin",
+    "build:admin": "nx build admin",
     "build:store": "nx run store:env-test",
     "build": "nx build",
     "test": "nx test",
