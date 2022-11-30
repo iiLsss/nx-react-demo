@@ -15,7 +15,7 @@ const store = configureStore({
   reducer: { [STORE_FEATURE_KEY]: storeReducer },
   // Additional middleware can be passed to this array
   middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
-  devTools: process.env.NODE_ENV !== 'production',
+  devTools: process.env['NODE_ENV'] !== 'production',
   // Optional Redux store enhancers
   enhancers: [],
 })

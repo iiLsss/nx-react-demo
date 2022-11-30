@@ -1,10 +1,12 @@
 // import React from 'react'
-
+import { useAppSelector } from '../../store'
 const Index = () => {
+  const { username, avatar } = useAppSelector((state) => state.user)
+
   return (
     <div className="wrap">
-      <p></p>
-      <p></p>
+      <img src={avatar} alt="" />
+      <p>用户名：{username}</p>
     </div>
   )
 }

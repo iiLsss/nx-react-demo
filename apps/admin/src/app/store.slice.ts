@@ -54,7 +54,7 @@ export const fetchStore = createAsyncThunk(
 
 export const initialStoreState: StoreState = storeAdapter.getInitialState({
   loadingStatus: 'not loaded',
-  error: null,
+  error: '',
 })
 
 export const storeSlice = createSlice({
@@ -79,7 +79,7 @@ export const storeSlice = createSlice({
       )
       .addCase(fetchStore.rejected, (state: StoreState, action) => {
         state.loadingStatus = 'error'
-        state.error = action.error.message
+        state.error = action.error?.message || ''
       })
   },
 })
@@ -125,7 +125,7 @@ export const storeActions = storeSlice.actions
  */
 const { selectAll, selectEntities } = storeAdapter.getSelectors()
 
-export const getStoreState = (rootState: unknown): StoreState =>
+export const getStoreState = (rootState: any): StoreState =>
   rootState[STORE_FEATURE_KEY]
 
 export const selectAllStore = createSelector(getStoreState, selectAll)
