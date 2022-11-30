@@ -1,4 +1,5 @@
-import axios, { AxiosResponse } from 'axios'
+import request from '../utils/request'
+import { AxiosResponse } from 'axios'
 import { API_CODE } from '../constants/statusCode'
 import { Userinfo } from '../types/user'
 interface Response<T> {
@@ -6,12 +7,11 @@ interface Response<T> {
   data: T
 }
 
-axios.defaults.baseURL = 'api'
 type GetUserInfo = () => Promise<Userinfo>
 
 export const getUserInfo: GetUserInfo = () => {
   return new Promise((resolve, reject) => {
-    axios
+    request
       .get(
         // 'https://mock.mengxuegu.com/mock/638450179433403d6c068829/nx/userinfo'
         '/mock/638450179433403d6c068829/nx/userinfo'

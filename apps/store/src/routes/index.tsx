@@ -1,8 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom'
 import MainLayout from '../components/MainLayout'
 import routers from './routers'
-import User from '../pages/User'
-import Home from '../pages/Home'
+// import User from '../pages/User'
+// import Home from '../pages/Home'
+import { lazy } from 'react'
+
+const Home = lazy(() => import('../pages/Home'))
+const User = lazy(() => import('../pages/User'))
 
 const router = [
   {

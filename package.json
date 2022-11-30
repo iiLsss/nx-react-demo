@@ -8,6 +8,7 @@
     "dev:admin": "nx run admin:serve",
     "build:admin": "nx build admin",
     "build:store": "nx run store:env-test",
+    "graph": "nx graph",
     "build": "nx build",
     "test": "nx test",
     "format": "nx format"
@@ -15,6 +16,7 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.8.0",
+    "@eeo/international": "^0.0.2",
     "@reduxjs/toolkit": "^1.8.5",
     "antd": "^4.24.1",
     "axios": "^1.2.0",
@@ -38,6 +40,7 @@
     "@nrwl/workspace": "15.0.13",
     "@testing-library/react": "13.4.0",
     "@types/jest": "28.1.1",
+    "@types/node": "16.11.7",
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
     "@types/react-router-dom": "5.3.3",

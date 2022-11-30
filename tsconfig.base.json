@@ -17,6 +17,12 @@
     "paths": {
       "@integrated-react-test/common-ui": ["libs/common-ui/src/index.ts"],
       "@integrated-react-test/products": ["libs/products/src/index.ts"],
+      "@integrated-react-test/shared/images": [
+        "libs/shared/images/src/index.ts"
+      ],
+      "@integrated-react-test/shared/imagess": [
+        "libs/shared/imagess/src/index.ts"
+      ],
       "@integrated-react-test/shared/my-feature-lib": [
         "libs/shared/my-feature-lib/src/index.ts"
       ]

@@ -12,6 +12,10 @@ module.exports = (config, context) => {
             '/api': '/',
           },
         },
+        // '/assets': {
+        //   target: 'https://www13.eeo.im',
+        //   changeOrigin: true,
+        // },
       },
     },
     // plugins: [
@@ -22,7 +26,7 @@ module.exports = (config, context) => {
     //   }),
     // ],
   })
-  console.log(mergeConfig.devServer)
+  // console.log(mergeConfig.output)
 
   return mergeConfig
 }
