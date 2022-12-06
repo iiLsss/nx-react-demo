@@ -1,15 +1,17 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.less'
-import { Banner } from '@integrated-react-test/common-ui'
+import classNames from 'classnames/bind'
+import { Route, Routes, Link, Outlet } from 'react-router-dom'
+import { lazy, Suspense } from 'react'
 
-import { Route, Routes, Link } from 'react-router-dom'
+const Home = lazy(() => import('../page/Home'))
+const PageTwo = lazy(() => import('../page/PageTwo'))
+const cx = classNames.bind(styles)
 
 export function App() {
   return (
-    <>
-      <Banner text="Welcome to our admin app." />
-      <br />
-      <div role="navigation">
+    <div className={cx('main-container')}>
+      <div className={cx('sidler')}>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -19,27 +21,16 @@ export function App() {
           </li>
         </ul>
       </div>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div>
-              This is the generated root route.{' '}
-              <Link to="/page-2">Click here for page 2.</Link>
-            </div>
-          }
-        />
-        <Route
-          path="/page-2"
-          element={
-            <div>
-              <Link to="/">Click here to go back to root page.</Link>
-            </div>
-          }
-        />
-      </Routes>
-      {/* END: routes */}
-    </>
+
+      <div className={cx('content')}>
+        <Suspense fallback={<p>loading ...</p>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/page-2" element={<PageTwo />} />
+          </Routes>
+        </Suspense>
+      </div>
+    </div>
   )
 }
 

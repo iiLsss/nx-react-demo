@@ -1,0 +1,23 @@
+.edit-div{ 
+  min-height: 24px;
+  background: #eee;
+  /* 
+  清除编辑器获取焦点时的默认样式：
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-user-modify:read-write-plaintext-only;
+  outline:none;
+  */
+  /* 设置光标颜色：*/
+  caret-color: green;
+  /* 防止全局设置 -webkit-user-select: none 后不会获取焦点 */
+  -webkit-user-select:text;
+  /* 设置提示文字 */
+  &:empty::before {
+    content: attr(placeholder);
+    color: #999;
+  }
+  &:focus::before {
+    content: none;
+  } 
+}
+
