@@ -6,7 +6,8 @@ export interface SpaceProps {}
 export function Space(props: SpaceProps) {
   return (
     <div className={styles['container']}>
-      <h1>Welcome to Space!</h1>
+      <p>common-ui 使用公共shared-images 图片</p>
+      <img src="./assets/data-monitoring.png" alt="" />
     </div>
   )
 }

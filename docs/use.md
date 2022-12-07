@@ -298,3 +298,9 @@ npx nx g @nrwl/react:lib [component-lib-name]
 npx nx g @nrwl/react:component [component-name] --project=[component-lib-name] --export
 ```
 
+5. 删除不需要的库
+
+```bash
+ npx nx g @nrwl/workspace:remove [project-name]
+```
+
