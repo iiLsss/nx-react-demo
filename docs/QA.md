@@ -106,3 +106,72 @@ shared
 ```
 
 
+
+## 自定义环境变量模式
+
+https://nx.dev/recipes/environment-variables/define-environment-variables
+
+`apps/store/project.json`配置文件的`target`字段新增命令`env-dev`、`env-test`、`env-prod`
+
+**apps/store/project.json**
+```json
+{
+  "targets": {
+    "env-dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "nx serve"
+        ],
+        "envFile": "apps/store/.env.dev",
+        "parallel": false
+      }
+    },
+    "env-test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "nx build"
+        ],
+        "envFile": "apps/store/.env.test",
+        "parallel": false
+      }
+    },
+    "env-prod": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "nx build"
+        ],
+        "envFile": "apps/store/.env.prod",
+        "parallel": false
+      }
+    },
+  }
+}
+
+```
+
+`apps/store`目录下新增环境配置文件`.env.dev`、`.env.test`、`.env.prod`
+
+```
+├── apps
+|   ├── store               
+|       ├── .env.dev 
+|       ├── .env.test 
+|       ├── .env.prod
+| .... 
+```
+
+根目录`package.json`修改启动打包命令
+```json
+{
+  "script": {
+    "start": "nx run store:env-dev",
+    "build:store": "nx run store:env-test",
+  }
+}
+```
+
+<!-- ## -->
+
