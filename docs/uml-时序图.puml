@@ -1,0 +1,33 @@
+@startuml
+title 评论序列图
+
+participant administratior as admin
+participant library as lib
+participant eachPost as ep
+actor user as user
+participant pendingComment as pc
+
+activate lib
+admin -> lib: display pending comments
+
+lib -> ep: *get pending comments
+
+ep -> pc: are you pending
+
+ep --> lib: pending comment
+
+activate pc
+
+lib -> pc: request approval
+
+
+
+user -> pc: approve
+activate pc
+
+deactivate pc
+
+pc --> lib
+lib --> admin
+
+@enduml
