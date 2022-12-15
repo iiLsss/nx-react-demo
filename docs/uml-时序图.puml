@@ -20,8 +20,6 @@ activate pc
 
 lib -> pc: request approval
 
-
-
 user -> pc: approve
 activate pc
 

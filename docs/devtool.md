@@ -24,3 +24,28 @@ as a reminder, here are the steps to follow when investigating front-end perform
 
 5 Analyses the results
 
+## 12
+
+
+## 13 本地重写
+
+
+
+字体[`font-display`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@font-face/font-display)属性决定了一个 @font-face 在不同的下载时间和可用时间下是如何展示的。
+
+
+## 14
+
+## 15 lazy loading
+
+- 替换文件
+
+- charles
+
+## 16 性能监视器
+
+command + shift + p 
+
+show performance monitor
+
+更多工具 -> 性能监视器
