@@ -556,3 +556,99 @@ function ParentComponent() {
 
 ### 状态更新、上下文和重新渲染
 
+是时候将这些部分放在一起了。我们知道：
+
+- 调用 `setState()` 将该组件的渲染排队
+- React 默认递归渲染嵌套组件
+- 上下文提供者由呈现它们的组件赋予一个值
+- 该值通常来自该父组件的状态
+
+这意味着默认情况下，对呈现上下文提供程序的父组件的任何状态更新都会导致其所有后代重新呈现，无论它们是否读取上下文值！
+
+如果我们回顾上面的 `Parent/Child/Grandchild` 示例，我们可以看到 `GrandchildComponent` 将重新渲染，但不是因为上下文更新 - 它会重新渲染，因为 `ChildComponent` 渲染了！。在这个例子中，没有试图优化掉“不必要”的渲染，所以 React 在 `ParentComponent` 渲染时默认渲染 `ChildComponent` 和 `GrandchildComponent。` 如果父级将新的上下文值放入 `MyContext.Provider`，`GrandchildComponent` 将在呈现并使用它时看到新值，但上下文更新不会导致 `GrandchildComponent` 呈现 - 它无论如何都会发生。
+
+### 上下文更新和渲染优化
+
+让我们修改该示例，使其真正尝试优化事物，但我们将通过在底部放置一个 GreatGrandchildComponent 来添加另一个变化:
+
+```js
+function GreatGrandchildComponent() {
+  return <div>Hi</div>
+}
+
+function GrandchildComponent() {
+  const value = useContext(MyContext);
+  return (
+    <div>
+      {value.a}
+      <GreatGrandchildComponent />
+    </div>
+}
+
+function ChildComponent() {
+  return <GrandchildComponent />
+}
+
+const MemoizedChildComponent = React.memo(ChildComponent);
+
+function ParentComponent() {
+  const [a, setA] = useState(0);
+  const [b, setB] = useState("text");
+
+  const contextValue = {a, b};
+
+  return (
+    <MyContext.Provider value={contextValue}>
+      <MemoizedChildComponent />
+    </MyContext.Provider>
+  )
+}
+```
+
+现在，如果我们调用 setA(42)：
+
+
+- `ParentComponent` 将呈现
+- 创建了一个新的 `contextValue` 引用
+- React 看到 `MyContext.Provider` 有一个新的上下文值，因此需要更新 `MyContext` 的任何消费者
+- React 将尝试渲染 `MemoizedChildComponent`，但看到它被包裹在 `React.memo()` 中。根本没有任何道具被传递，所以道具实际上并没有改变。 React 将完全跳过渲染 `ChildComponent`。
+- 但是，`MyContext.Provider` 有一个更新，因此可能有更深层次的组件需要了解它。
+- React 继续向下，到达 `GrandchildComponent。` 它看到 `MyContext` 被 `GrandchildComponent` 读取，因此它应该重新呈现，因为有一个新的上下文值。 React 继续并重新渲染 `GrandchildComponent`，特别是因为上下文更改。
+- 因为 `GrandchildComponent` 确实渲染了，所以 React 会继续进行并渲染其中的任何内容。所以，React 也会重新渲染 `GreatGrandchildComponent`。
+
+换句话说，正如 Sophie Alpert 所说：
+
+> 上下文提供者下的 React 组件可能应该使用 React.memo
+
+这样，父组件中的状态更新将不会强制每个组件重新渲染，只会强制读取上下文的部分。 （您也可以通过让 `ParentComponent` 渲染 `<MyContext.Provider>{props.children}</MyContext.Provider>` 获得基本相同的结果，它利用“相同元素引用”技术来避免子组件重新渲染，然后再渲染 `<ParentComponent><ChildComponent /></ParentComponent>` 从上一层。）
+
+但是请注意，一旦 `GrandchildComponent` 基于下一个上下文值进行渲染，React 就会立即返回其默认行为，即递归地重新渲染所有内容。 所以，`GreatGrandchildComponent` 被渲染了，下面的任何其他东西也会被渲染。
+
+### 上下文和渲染器边界
+
+通常，React 应用程序完全使用单个渲染器构建，例如 ReactDOM 或 React Native。 但是，核心渲染和协调逻辑作为一个名为 `react-reconciler` 的包发布，您可以使用它来构建您自己的针对其他环境的 React 版本。 很好的例子是 `react-three-fiber`，它使用 React 来驱动 Three.js 模型和 WebGL 渲染，以及 ink，它使用 React 绘制终端文本 UI。
+
+一个长期存在的限制是，如果您在一个应用程序中有多个渲染器，例如在 ReactDOM 中显示 React-Three-Fiber 内容，上下文提供程序将不会通过渲染器边界。所以，如果组件树看起来像这样：
+
+```
+function App() {
+  return (
+    <MyContext.Provider>
+      <DomComponent>
+        <ReactThreeFiberParent>
+          <ReactThreeFiberChild />
+        </ReactThreeFiberParent>
+      </DomComponent>
+    </MyContext.Provider>
+  );
+}
+```
+
+其中 `ReactFiberParent` 创建并显示使用 React-Three-Fiber 呈现的内容，然后 `<ReactThreeFiberChild>` 将无法看到来自 `<MyContext.Provider>` 的值。
+
+这是 React 的一个已知限制，目前没有正式的方法来解决这个问题。
+
+也就是说，React-Three-Fiber 背后的 Poimandres 组织有一些使上下文桥接可行的内部黑客，他们最近发布了一个名为 https://github.com/pmndrs/its-fine 的库，其中包含一个 useContextBridge 钩子，它是 一个有效的解决方法。
+
+## React-Redux 和渲染行为
+
