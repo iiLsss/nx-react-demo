@@ -1,10 +1,15 @@
-import { Tree, Button } from 'antd'
+import { Tree, Button, Modal } from 'antd'
 import React, { useState } from 'react'
 import classnames from 'classnames/bind'
 import s from './index.module.less'
 import { treeData, DataNode } from './const'
 import ModalTree from '../../components/ModalTree'
-import { DeleteOutlined, PlusOutlined } from '@ant-design/icons'
+import DeptAction from './DeptAction'
+import {
+  DeleteOutlined,
+  PlusSquareOutlined,
+  FormOutlined,
+} from '@ant-design/icons'
 const cx = classnames.bind(s)
 
 const { TreeNode } = Tree
@@ -13,8 +18,27 @@ type TreeTitleProps = {
   item: DataNode
   onDelete: () => void
   onAdd: () => void
+  onEdit: () => void
 }
-const TreeTitle: React.FC<TreeTitleProps> = ({ item, onDelete, onAdd }) => {
+const TreeTitle: React.FC<TreeTitleProps> = ({
+  item,
+  onDelete,
+  onAdd,
+  onEdit,
+}) => {
+  const handleDelete = (ev: React.MouseEvent<HTMLDivElement>) => {
+    ev.stopPropagation()
+    onDelete()
+  }
+  const handleAdd = (ev: React.MouseEvent<HTMLDivElement>) => {
+    ev.stopPropagation()
+    onAdd()
+  }
+  const handleEdit = (ev: React.MouseEvent<HTMLDivElement>) => {
+    ev.stopPropagation()
+    onEdit()
+  }
+
   return (
     <span className={`${cx('tree-item')} tree-item`}>
       <span>
@@ -22,8 +46,9 @@ const TreeTitle: React.FC<TreeTitleProps> = ({ item, onDelete, onAdd }) => {
         <span>(tips)</span>
       </span>
       <span>
-        <DeleteOutlined onClick={onDelete} />
-        <PlusOutlined onClick={onAdd} />
+        <FormOutlined onClick={handleEdit} />
+        <DeleteOutlined onClick={handleDelete} />
+        <PlusSquareOutlined onClick={handleAdd} />
       </span>
     </span>
   )
@@ -32,7 +57,9 @@ const TreeTitle: React.FC<TreeTitleProps> = ({ item, onDelete, onAdd }) => {
 const getTreeNode = (
   data: DataNode[],
   onAdd: (data: DataNode) => void,
-  onDelete: (data: DataNode) => void
+  onDelete: (data: DataNode) => void,
+  onEdit: (data: DataNode, parent?: DataNode) => void,
+  parent?: DataNode
 ) => {
   if (data && data.length > 0) {
     return data.map((item) => {
@@ -42,13 +69,14 @@ const getTreeNode = (
             key={item.deptId}
             title={
               <TreeTitle
+                onEdit={() => onEdit(item, parent)}
                 onAdd={() => onAdd(item)}
                 onDelete={() => onDelete(item)}
                 item={item}
               />
             }
           >
-            {getTreeNode(item.children, onAdd, onDelete)}
+            {getTreeNode(item.children, onAdd, onDelete, onEdit, item)}
           </TreeNode>
         )
       }
@@ -57,6 +85,7 @@ const getTreeNode = (
           key={item.deptId}
           title={
             <TreeTitle
+              onEdit={() => onEdit(item, parent)}
               onAdd={() => onAdd(item)}
               onDelete={() => onDelete(item)}
               item={item}
@@ -84,12 +113,23 @@ const Index: React.FC = () => {
     name: defaultValue,
   })
 
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [editDeptInfo, setEditDeptInfo] = useState<any>({})
+
   const onSelect = (selectedKeys: React.Key[]) => {
     console.log(selectedKeys)
   }
 
   const handleAdd = (data: any) => {
     console.log(data)
+
+    setEditDeptInfo({
+      type: 'add',
+      title: '新增部门',
+      // parentId: data.
+      parentName: data.name,
+    })
+    setIsModalOpen(true)
   }
 
   const handleDelete = (data: any) => {
@@ -99,6 +139,27 @@ const Index: React.FC = () => {
   const handleChange = (data: any) => {
     console.log(data)
     setDeptInfo(data)
+  }
+
+  const handleEdit = (self: any, parent: any) => {
+    console.log(self, parent)
+    setEditDeptInfo({
+      type: 'edit',
+      title: '修改部门名称',
+      value: self.name,
+      parentName: parent?.name || '公司名',
+    })
+    setIsModalOpen(true)
+  }
+
+  const handleEditDeptInfo = (data: any) => {
+    console.log(data)
+    // todo 调用接口
+  }
+
+  const handleDeptModal = () => {
+    setEditDeptInfo({})
+    setIsModalOpen(false)
   }
 
   return (
@@ -111,7 +172,7 @@ const Index: React.FC = () => {
           height={600}
           onSelect={onSelect}
         >
-          {getTreeNode(treeData, handleAdd, handleDelete)}
+          {getTreeNode(treeData, handleAdd, handleDelete, handleEdit)}
         </Tree>
       </div>
       <p></p>
@@ -119,6 +180,12 @@ const Index: React.FC = () => {
         label={deptInfo.name}
         value={deptInfo.deptId}
         onChange={handleChange}
+      />
+      <DeptAction
+        onClose={handleDeptModal}
+        onChange={handleEditDeptInfo}
+        open={isModalOpen}
+        info={editDeptInfo}
       />
     </div>
   )

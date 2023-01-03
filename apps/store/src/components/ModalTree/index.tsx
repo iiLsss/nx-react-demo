@@ -1,4 +1,4 @@
-import { Modal, Button, Select, Tree, Input, message } from 'antd'
+import { Modal, Button, Space, Select, Tree, Input, message } from 'antd'
 import React, { useEffect, useState, useRef } from 'react'
 import { treeData, DeptNode, DataNode } from './const'
 import classnames from 'classnames/bind'
@@ -123,6 +123,14 @@ const Index: React.FC<Props> = ({ label, value, onChange }) => {
         onOk={handleOk}
         width={452}
         onCancel={handleCancel}
+        footer={
+          <Space>
+            <Button onClick={handleCancel}>取消</Button>
+            <Button onClick={handleOk} type="primary">
+              确定
+            </Button>
+          </Space>
+        }
       >
         <Search
           style={{ marginBottom: 8 }}
