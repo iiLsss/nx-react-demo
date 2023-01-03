@@ -18,7 +18,7 @@
     "@ant-design/icons": "^4.8.0",
     "@eeo/international": "^0.0.2",
     "@reduxjs/toolkit": "^1.8.5",
-    "antd": "^4.24.1",
+    "antd": "4.24.7",
     "axios": "^1.2.0",
     "classnames": "^2.3.2",
     "core-js": "^3.6.5",

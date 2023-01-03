@@ -46,6 +46,7 @@ const App: React.FC<Props> = (props) => {
     if (props.sider.length) {
       const list = formatSider(props.sider)
       setSiderList(list)
+      console.log(list)
     }
   }, [props.sider])
 
@@ -53,8 +54,6 @@ const App: React.FC<Props> = (props) => {
     <Sider width={200} className="site-layout-background">
       <Menu
         mode="inline"
-        defaultSelectedKeys={['1']}
-        defaultOpenKeys={['sub1']}
         style={{ height: '100%', borderRight: 0 }}
         items={siderList}
       />
