@@ -60,9 +60,7 @@
           "libs/shared/styles/index.less",
           "apps/store/src/styles.less"
         ],
-        "stylePreprocessorOptions": {
-          "includePaths": [ "libs/shared/styles" ]
-        },
+        
         "scripts": [],
         "webpackConfig": "apps/store/custom-webpack.config.js"
       },
@@ -92,6 +90,7 @@
     "serve": {
       "executor": "@nrwl/webpack:dev-server",
       "defaultConfiguration": "development",
+      "liveReload": true,
       "options": {
         "buildTarget": "store:build",
         "hmr": true

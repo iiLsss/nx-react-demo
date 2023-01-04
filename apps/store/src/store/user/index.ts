@@ -14,6 +14,8 @@ export const userSlice = createSlice({
   initialState: {
     username: '',
     avatar: '',
+    userInfo: {},
+    permissionIds: ['1', '2'],
   },
   reducers: {},
   extraReducers(builder) {
