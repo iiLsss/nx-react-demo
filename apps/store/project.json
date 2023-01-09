@@ -47,6 +47,7 @@
         "main": "apps/store/src/main.tsx",
         "polyfills": "apps/store/src/polyfills.ts",
         "tsConfig": "apps/store/tsconfig.app.json",
+        "generatePackageJson": true,
         "assets": [
           "apps/store/src/favicon.ico", 
           "apps/store/src/assets",

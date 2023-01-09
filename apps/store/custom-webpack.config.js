@@ -26,13 +26,13 @@ module.exports = (config, context) => {
         },
       },
     },
-    // plugins: [
-    //   new HtmlWebpackPlugin({
-    //     filename: (filename) => `${filename}.html`,
-    //     template: './src/index.html',
-    //     inject: true,
-    //   }),
-    // ],
+    plugins: [
+      // new HtmlWebpackPlugin({
+      //   filename: (filename) => `${filename}.html`,
+      //   template: './src/index.html',
+      //   inject: true,
+      // }),
+    ],
   })
 
   return mergeConfig

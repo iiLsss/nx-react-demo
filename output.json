@@ -1,0 +1,2123 @@
+{
+  "graph": {
+    "nodes": {
+      "shared-imagess": {
+        "name": "shared-imagess",
+        "type": "lib",
+        "data": {
+          "name": "shared-imagess",
+          "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "libs/shared/imagess/src",
+          "projectType": "library",
+          "targets": {
+            "lint": {
+              "executor": "@nrwl/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "libs/shared/imagess/**/*.ts"
+                ]
+              },
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.eslintrc.json"
+              ]
+            },
+            "test": {
+              "executor": "@nrwl/jest:jest",
+              "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+              ],
+              "options": {
+                "jestConfig": "libs/shared/imagess/jest.config.ts",
+                "passWithNoTests": true
+              },
+              "inputs": [
+                "default",
+                "^production",
+                "{workspaceRoot}/jest.preset.js"
+              ]
+            }
+          },
+          "tags": [],
+          "root": "libs/shared/imagess",
+          "files": [
+            {
+              "file": "libs/shared/imagess/.babelrc",
+              "hash": "cf7ddd99c615a064ac18eb3109eee4f394ab1faf"
+            },
+            {
+              "file": "libs/shared/imagess/.eslintrc.json",
+              "hash": "3456be9b9036a42c593c82b050281230e4ca0ae4"
+            },
+            {
+              "file": "libs/shared/imagess/jest.config.ts",
+              "hash": "4129553f9acaa046e595eee5e3b2f40a9b32e986"
+            },
+            {
+              "file": "libs/shared/imagess/project.json",
+              "hash": "42265fba5ee16f42ced3eb19c965d194edc1881e"
+            },
+            {
+              "file": "libs/shared/imagess/README.md",
+              "hash": "d6f06f8851affa29f4ca594fda5f6f3cca56ce1b"
+            },
+            {
+              "file": "libs/shared/imagess/src/data-monitoring.png",
+              "hash": "2db0cc735e640f3f3f752b0b50349c1f4c7c7358"
+            },
+            {
+              "file": "libs/shared/imagess/src/mail-letter.svg",
+              "hash": "e00554fd66fd36852bf51ededcab555b5bbfc7c4"
+            },
+            {
+              "file": "libs/shared/imagess/src/play-video.png",
+              "hash": "3ff803a4ef389b6bb10ac14b112bc28833d32b35"
+            },
+            {
+              "file": "libs/shared/imagess/src/ystem-warning.svg",
+              "hash": "52fb064cf26067179b63298922d728643bcdff50"
+            },
+            {
+              "file": "libs/shared/imagess/tsconfig.json",
+              "hash": "355f7fda9792f1426646744fb60198b3dd36560b"
+            },
+            {
+              "file": "libs/shared/imagess/tsconfig.lib.json",
+              "hash": "942bfbad71f92db6318edb6762efaf412d54c098"
+            },
+            {
+              "file": "libs/shared/imagess/tsconfig.spec.json",
+              "hash": "0be00e2681c548769b7bcb03d5c2ef4bf5863a2b"
+            }
+          ]
+        }
+      },
+      "styles": {
+        "name": "styles",
+        "type": "lib",
+        "data": {
+          "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "libs/shared/styles/src",
+          "projectType": "library",
+          "generators": {},
+          "targets": {},
+          "tags": [
+            "scope:shared",
+            "type:styles"
+          ],
+          "root": "libs/shared/styles",
+          "files": [
+            {
+              "file": "libs/shared/styles/index.less",
+              "hash": "2349c66b0099615ea125d118240d1adbe6038ff4"
+            },
+            {
+              "file": "libs/shared/styles/project.json",
+              "hash": "47566a51c14545b7fa381bbfddd4e36217c80c69"
+            },
+            {
+              "file": "libs/shared/styles/src/antd.less",
+              "hash": "b191a87791a1c94e5ff71960cb15eff11e8a5ae1"
+            },
+            {
+              "file": "libs/shared/styles/src/theme-file.less",
+              "hash": "654b79c67954121a7f07b8070ac461e7ca7d9969"
+            }
+          ]
+        }
+      },
+      "common-ui": {
+        "name": "common-ui",
+        "type": "lib",
+        "data": {
+          "name": "common-ui",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "libs/common-ui/src",
+          "projectType": "library",
+          "tags": [],
+          "targets": {
+            "lint": {
+              "executor": "@nrwl/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "libs/common-ui/**/*.{ts,tsx,js,jsx}"
+                ]
+              },
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.eslintrc.json"
+              ]
+            },
+            "test": {
+              "executor": "@nrwl/jest:jest",
+              "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+              ],
+              "options": {
+                "jestConfig": "libs/common-ui/jest.config.ts",
+                "passWithNoTests": true
+              },
+              "inputs": [
+                "default",
+                "^production",
+                "{workspaceRoot}/jest.preset.js"
+              ]
+            }
+          },
+          "root": "libs/common-ui",
+          "files": [
+            {
+              "file": "libs/common-ui/.babelrc",
+              "hash": "ccae900be42788285eb6e1b3a2af4b81f56f14fe"
+            },
+            {
+              "file": "libs/common-ui/.eslintrc.json",
+              "hash": "734ddaceea447738208c9519158ad6b3062f3929"
+            },
+            {
+              "file": "libs/common-ui/jest.config.ts",
+              "hash": "5ad4dbc131ded3f95d5841f81fdcd6992b56caab"
+            },
+            {
+              "file": "libs/common-ui/project.json",
+              "hash": "57ac6512d94287f05f7625cca5e1117ec502bb39"
+            },
+            {
+              "file": "libs/common-ui/README.md",
+              "hash": "1bef20008a4c3538b41b100168dac98c52ff3fd5"
+            },
+            {
+              "file": "libs/common-ui/src/index.ts",
+              "hash": "2e66c3dfaecd3c62d267680d448002bcd14e68ea"
+            },
+            {
+              "file": "libs/common-ui/src/lib/banner/banner.module.less",
+              "hash": "4fb812bfe7e5dcc65001b05520e34ddc4450991d"
+            },
+            {
+              "file": "libs/common-ui/src/lib/banner/banner.png",
+              "hash": "6e04698e3b6e3afe94c6adb848ed87df7ddea161"
+            },
+            {
+              "file": "libs/common-ui/src/lib/banner/banner.spec.tsx",
+              "hash": "d8d1da7093337402745eb943d5b5237fc88cd3ec",
+              "deps": [
+                "npm:@testing-library/react"
+              ]
+            },
+            {
+              "file": "libs/common-ui/src/lib/banner/banner.tsx",
+              "hash": "a8fcd3e2544ab46cd851d9c06c8ce6bb79af75e1",
+              "deps": [
+                "npm:classnames"
+              ]
+            },
+            {
+              "file": "libs/common-ui/src/lib/button/button.module.less",
+              "hash": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+            },
+            {
+              "file": "libs/common-ui/src/lib/button/button.spec.tsx",
+              "hash": "b91f90941b0b5ef824146d9ebad37b35a2070386",
+              "deps": [
+                "npm:@testing-library/react"
+              ]
+            },
+            {
+              "file": "libs/common-ui/src/lib/button/button.tsx",
+              "hash": "06375234f810b662a1d8fc870e20b544a9703b1b",
+              "deps": [
+                "npm:antd"
+              ]
+            },
+            {
+              "file": "libs/common-ui/src/lib/cm-demo/common-ui.module.less",
+              "hash": "4beff571c7a2e45ac8ff862830abaf8e5f73bac5"
+            },
+            {
+              "file": "libs/common-ui/src/lib/cm-demo/common-ui.spec.tsx",
+              "hash": "60e584d7ba4b7e28bef11c65462a3e12724f8176",
+              "deps": [
+                "npm:@testing-library/react"
+              ]
+            },
+            {
+              "file": "libs/common-ui/src/lib/cm-demo/common-ui.tsx",
+              "hash": "6c494c54024fedb358e58545f427326772e28c5e"
+            },
+            {
+              "file": "libs/common-ui/src/lib/common-ui-test/common-ui-test.module.less",
+              "hash": "45c2aa47e9879fa033c0d1f266154dd6106c2201"
+            },
+            {
+              "file": "libs/common-ui/src/lib/common-ui-test/common-ui-test.spec.tsx",
+              "hash": "16e3ef342a56ba40c3003e9fcd0b040efc651b3a",
+              "deps": [
+                "npm:@testing-library/react"
+              ]
+            },
+            {
+              "file": "libs/common-ui/src/lib/common-ui-test/common-ui-test.tsx",
+              "hash": "dcd3eb81085e9a976ba58a3c8b4ae461d95c1700"
+            },
+            {
+              "file": "libs/common-ui/src/lib/Content/index.tsx",
+              "hash": "3a238c17106c8ed1b57c2d9faf80912f327a85c7",
+              "deps": [
+                "npm:antd",
+                "npm:react"
+              ]
+            },
+            {
+              "file": "libs/common-ui/src/lib/Header/index.tsx",
+              "hash": "2a45665222a14e2e078be745db09c3cb7ea321bf",
+              "deps": [
+                "npm:antd",
+                "npm:react"
+              ]
+            },
+            {
+              "file": "libs/common-ui/src/lib/Layout/index.module.less",
+              "hash": "0185a86b0eb299dcd62a86318b6c8f92514040b6"
+            },
+            {
+              "file": "libs/common-ui/src/lib/Layout/index.tsx",
+              "hash": "8b44356a2d441a2b6c5d297359b43f343b53809a",
+              "deps": [
+                "npm:antd",
+                "npm:classnames",
+                "npm:react"
+              ]
+            },
+            {
+              "file": "libs/common-ui/src/lib/Sider/index.tsx",
+              "hash": "141a7f17995caebf29105201389bfedd174968f4",
+              "deps": [
+                "npm:antd",
+                "npm:react",
+                "npm:react-router-dom"
+              ]
+            },
+            {
+              "file": "libs/common-ui/src/lib/space/space.module.less",
+              "hash": "c9ef9128e5a9b8f7c2b7ec271eb6fbf99b0e1bfd"
+            },
+            {
+              "file": "libs/common-ui/src/lib/space/space.spec.tsx",
+              "hash": "bc2cad6a385798964d5d160f575ac9fbc862676d",
+              "deps": [
+                "npm:@testing-library/react"
+              ]
+            },
+            {
+              "file": "libs/common-ui/src/lib/space/space.tsx",
+              "hash": "bbdf9a7d4240cd568f11028aa4dd7a2a3b78ea48"
+            },
+            {
+              "file": "libs/common-ui/tsconfig.json",
+              "hash": "4c089585ed6b0a3c4767aee6a136bb6f47cad2b6"
+            },
+            {
+              "file": "libs/common-ui/tsconfig.lib.json",
+              "hash": "af84f21cfc8066d0302f5772b7c157e81d418617"
+            },
+            {
+              "file": "libs/common-ui/tsconfig.spec.json",
+              "hash": "ff08addd60ff581234ec9423d2bb90f31d8166e8"
+            }
+          ]
+        }
+      },
+      "shared-ui": {
+        "name": "shared-ui",
+        "type": "lib",
+        "data": {
+          "name": "shared-ui",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "libs/shared-ui/src",
+          "projectType": "library",
+          "tags": [],
+          "targets": {
+            "lint": {
+              "executor": "@nrwl/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "libs/shared-ui/**/*.{ts,tsx,js,jsx}"
+                ]
+              },
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.eslintrc.json"
+              ]
+            },
+            "test": {
+              "executor": "@nrwl/jest:jest",
+              "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+              ],
+              "options": {
+                "jestConfig": "libs/shared-ui/jest.config.ts",
+                "passWithNoTests": true
+              },
+              "inputs": [
+                "default",
+                "^production",
+                "{workspaceRoot}/jest.preset.js"
+              ]
+            }
+          },
+          "root": "libs/shared-ui",
+          "files": [
+            {
+              "file": "libs/shared-ui/.babelrc",
+              "hash": "ccae900be42788285eb6e1b3a2af4b81f56f14fe"
+            },
+            {
+              "file": "libs/shared-ui/.eslintrc.json",
+              "hash": "734ddaceea447738208c9519158ad6b3062f3929"
+            },
+            {
+              "file": "libs/shared-ui/jest.config.ts",
+              "hash": "8d0fd5d4c93dd6c57abca5afd18cc4878f654f63"
+            },
+            {
+              "file": "libs/shared-ui/project.json",
+              "hash": "406e00691fe594e74216ba83eea98aab43c621e5"
+            },
+            {
+              "file": "libs/shared-ui/README.md",
+              "hash": "594b0219e56bcfa1f831dfd8c47390eb8385e931"
+            },
+            {
+              "file": "libs/shared-ui/src/index.ts",
+              "hash": "e34e5508ec7cfff85c4c0ef1b04f712240dc3f9a"
+            },
+            {
+              "file": "libs/shared-ui/src/lib/banner/banner.module.less",
+              "hash": "45c2aa47e9879fa033c0d1f266154dd6106c2201"
+            },
+            {
+              "file": "libs/shared-ui/src/lib/banner/banner.spec.tsx",
+              "hash": "d8d1da7093337402745eb943d5b5237fc88cd3ec",
+              "deps": [
+                "npm:@testing-library/react"
+              ]
+            },
+            {
+              "file": "libs/shared-ui/src/lib/banner/banner.tsx",
+              "hash": "1590f53eb7225aa87950f2acec35c27b34915fa9"
+            },
+            {
+              "file": "libs/shared-ui/src/lib/shared-ui.module.less",
+              "hash": "45c2aa47e9879fa033c0d1f266154dd6106c2201"
+            },
+            {
+              "file": "libs/shared-ui/src/lib/shared-ui.spec.tsx",
+              "hash": "ecf2f3a4d41d79dcbb2d81bfcc1a6b98a9de9059",
+              "deps": [
+                "npm:@testing-library/react"
+              ]
+            },
+            {
+              "file": "libs/shared-ui/src/lib/shared-ui.tsx",
+              "hash": "41bcc496568ac47f1b09cff772c87ad93b091969"
+            },
+            {
+              "file": "libs/shared-ui/tsconfig.json",
+              "hash": "4c089585ed6b0a3c4767aee6a136bb6f47cad2b6"
+            },
+            {
+              "file": "libs/shared-ui/tsconfig.lib.json",
+              "hash": "af84f21cfc8066d0302f5772b7c157e81d418617"
+            },
+            {
+              "file": "libs/shared-ui/tsconfig.spec.json",
+              "hash": "ff08addd60ff581234ec9423d2bb90f31d8166e8"
+            }
+          ]
+        }
+      },
+      "products": {
+        "name": "products",
+        "type": "lib",
+        "data": {
+          "name": "products",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "libs/products/src",
+          "projectType": "library",
+          "targets": {
+            "build": {
+              "executor": "@nrwl/js:tsc",
+              "outputs": [
+                "{options.outputPath}"
+              ],
+              "options": {
+                "outputPath": "dist/libs/products",
+                "main": "libs/products/src/index.ts",
+                "tsConfig": "libs/products/tsconfig.lib.json",
+                "assets": [
+                  "libs/products/*.md"
+                ]
+              },
+              "dependsOn": [
+                "^build"
+              ],
+              "inputs": [
+                "production",
+                "^production"
+              ]
+            },
+            "lint": {
+              "executor": "@nrwl/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "libs/products/**/*.ts"
+                ]
+              },
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.eslintrc.json"
+              ]
+            },
+            "test": {
+              "executor": "@nrwl/jest:jest",
+              "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+              ],
+              "options": {
+                "jestConfig": "libs/products/jest.config.ts",
+                "passWithNoTests": true
+              },
+              "inputs": [
+                "default",
+                "^production",
+                "{workspaceRoot}/jest.preset.js"
+              ]
+            }
+          },
+          "tags": [],
+          "root": "libs/products",
+          "files": [
+            {
+              "file": "libs/products/.babelrc",
+              "hash": "e24a5465f39c41b591d8bf49a58c93f0eb2b4916"
+            },
+            {
+              "file": "libs/products/.eslintrc.json",
+              "hash": "9d9c0db55bb1e91c5f2e7b64a02bc6bf69fc7cb5"
+            },
+            {
+              "file": "libs/products/jest.config.ts",
+              "hash": "c49d057dbabf524796571900be9cf31c8949fb39"
+            },
+            {
+              "file": "libs/products/package.json",
+              "hash": "807df3e3847a14bfcda68227690ac459ffbb3cf6"
+            },
+            {
+              "file": "libs/products/project.json",
+              "hash": "0c5e151d94e768682c6f9bb1b5358192dce9b40b"
+            },
+            {
+              "file": "libs/products/README.md",
+              "hash": "cce14166c53a8c54dda499cfdf20b326a47d105a"
+            },
+            {
+              "file": "libs/products/src/index.ts",
+              "hash": "3c1ec2c074ea5f8508b1b6f7df69119b5bd07e36"
+            },
+            {
+              "file": "libs/products/src/lib/products.spec.ts",
+              "hash": "4546934a0f4ee4283c38b13e4bfa395f299ecfb4"
+            },
+            {
+              "file": "libs/products/src/lib/products.ts",
+              "hash": "9cc4108f23b365dc4b551b4d354e904f3fe28562"
+            },
+            {
+              "file": "libs/products/tsconfig.json",
+              "hash": "f5b85657a88323b3f9173ca094e873053bfe211b"
+            },
+            {
+              "file": "libs/products/tsconfig.lib.json",
+              "hash": "7bfc80f73e6fada4c296974cfe9c63303af047da"
+            },
+            {
+              "file": "libs/products/tsconfig.spec.json",
+              "hash": "546f12877f7f05dd2e7b8782c7d6eae8189c34c0"
+            }
+          ]
+        }
+      },
+      "admin": {
+        "name": "admin",
+        "type": "app",
+        "data": {
+          "name": "admin",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "apps/admin/src",
+          "projectType": "application",
+          "targets": {
+            "build": {
+              "executor": "@nrwl/webpack:webpack",
+              "outputs": [
+                "{options.outputPath}"
+              ],
+              "defaultConfiguration": "production",
+              "options": {
+                "compiler": "babel",
+                "outputPath": "dist/apps/admin",
+                "index": "apps/admin/src/index.html",
+                "baseHref": "/",
+                "main": "apps/admin/src/main.tsx",
+                "polyfills": "apps/admin/src/polyfills.ts",
+                "tsConfig": "apps/admin/tsconfig.app.json",
+                "assets": [
+                  "apps/admin/src/favicon.ico",
+                  "apps/admin/src/assets"
+                ],
+                "styles": [
+                  "apps/admin/src/styles.less"
+                ],
+                "scripts": [],
+                "webpackConfig": "apps/admin/custom-webpack.config.js",
+                "generatePackageJson": true
+              },
+              "configurations": {
+                "development": {
+                  "extractLicenses": false,
+                  "optimization": false,
+                  "sourceMap": true,
+                  "vendorChunk": true
+                },
+                "production": {
+                  "optimization": true,
+                  "outputHashing": "all",
+                  "sourceMap": false,
+                  "namedChunks": false,
+                  "extractLicenses": true,
+                  "vendorChunk": false
+                }
+              },
+              "dependsOn": [
+                "^build"
+              ],
+              "inputs": [
+                "production",
+                "^production"
+              ]
+            },
+            "serve": {
+              "executor": "@nrwl/webpack:dev-server",
+              "defaultConfiguration": "development",
+              "options": {
+                "buildTarget": "admin:build",
+                "hmr": true,
+                "port": 4210
+              },
+              "configurations": {
+                "development": {
+                  "buildTarget": "admin:build:development"
+                },
+                "production": {
+                  "buildTarget": "admin:build:production",
+                  "hmr": false
+                }
+              }
+            },
+            "lint": {
+              "executor": "@nrwl/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/admin/**/*.{ts,tsx,js,jsx}"
+                ]
+              },
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.eslintrc.json"
+              ]
+            },
+            "test": {
+              "executor": "@nrwl/jest:jest",
+              "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+              ],
+              "options": {
+                "jestConfig": "apps/admin/jest.config.ts",
+                "passWithNoTests": true
+              },
+              "inputs": [
+                "default",
+                "^production",
+                "{workspaceRoot}/jest.preset.js"
+              ]
+            }
+          },
+          "tags": [],
+          "root": "apps/admin",
+          "files": [
+            {
+              "file": "apps/admin/.babelrc",
+              "hash": "61641ec8ac3659e204441c80bb06defe323e3110"
+            },
+            {
+              "file": "apps/admin/.browserslistrc",
+              "hash": "f1d12df4faa25ab7f0f03196105e957395f609af"
+            },
+            {
+              "file": "apps/admin/.eslintrc.json",
+              "hash": "734ddaceea447738208c9519158ad6b3062f3929"
+            },
+            {
+              "file": "apps/admin/custom-webpack.config.js",
+              "hash": "423e6f9c9b5c87f35356a82a899095b8d1283e31",
+              "deps": [
+                "npm:webpack-merge"
+              ]
+            },
+            {
+              "file": "apps/admin/jest.config.ts",
+              "hash": "f3410807c6b08ce3a9c9f34e012ac69734a70c69"
+            },
+            {
+              "file": "apps/admin/project.json",
+              "hash": "889ac7ab46b2e66193594341b21c334c1bf7a4d8"
+            },
+            {
+              "file": "apps/admin/src/app/app.module.less",
+              "hash": "ff9df9ee29499486a0efc58185cce069342a9ebc"
+            },
+            {
+              "file": "apps/admin/src/app/app.spec.tsx",
+              "hash": "73ed65724c1cbd7b1ac2b45db235b7d75aa0dc74",
+              "deps": [
+                "npm:@testing-library/react",
+                "npm:react-router-dom"
+              ]
+            },
+            {
+              "file": "apps/admin/src/app/app.tsx",
+              "hash": "3783d2ddbb1aeeacd7815e6b6330c41716ec7a03",
+              "deps": [
+                "npm:classnames",
+                "npm:react-router-dom",
+                "npm:react"
+              ]
+            },
+            {
+              "file": "apps/admin/src/app/store.slice.spec.ts",
+              "hash": "3d22ab1e3912d0462f7508bffd6646c42478538f"
+            },
+            {
+              "file": "apps/admin/src/app/store.slice.ts",
+              "hash": "8aa0eea7fb2538b2dc571dc2768c60428ecd08cb",
+              "deps": [
+                "npm:@reduxjs/toolkit"
+              ]
+            },
+            {
+              "file": "apps/admin/src/assets/.gitkeep",
+              "hash": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+            },
+            {
+              "file": "apps/admin/src/components/Header/index.module.less",
+              "hash": "2ad28474a5b61a120336de3b021fd48eb3b0cbc9"
+            },
+            {
+              "file": "apps/admin/src/components/Header/index.tsx",
+              "hash": "70a5047fa7b77e7b7d1754e3829413c20e84302b",
+              "deps": [
+                "npm:react",
+                "npm:classnames",
+                "npm:@ant-design/icons"
+              ]
+            },
+            {
+              "file": "apps/admin/src/favicon.ico",
+              "hash": "317ebcb2336e0833a22dddf0ab287849f26fda57"
+            },
+            {
+              "file": "apps/admin/src/index.html",
+              "hash": "2bbfba2ec767360399024a7f22e6eee71dda0b7e"
+            },
+            {
+              "file": "apps/admin/src/main.tsx",
+              "hash": "97257dfad6d477fc24478f8e20bbaf9a4a84b396",
+              "deps": [
+                "npm:react",
+                "npm:react-dom",
+                "npm:@reduxjs/toolkit",
+                "npm:react-redux"
+              ]
+            },
+            {
+              "file": "apps/admin/src/page/Home/index.module.less",
+              "hash": "ffc58c4a56f9007c396a8d74c43aaf95fa395642"
+            },
+            {
+              "file": "apps/admin/src/page/Home/index.tsx",
+              "hash": "0eb3ded0f05fbbb7794443657663f86541f63f0a",
+              "deps": [
+                "npm:react-router-dom",
+                "npm:classnames"
+              ]
+            },
+            {
+              "file": "apps/admin/src/page/LearnCenter/index.module.less",
+              "hash": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+            },
+            {
+              "file": "apps/admin/src/page/LearnCenter/index.tsx",
+              "hash": "b6f7bc65ce831767404238bc9399d905285a929d",
+              "deps": [
+                "npm:react",
+                "npm:classnames"
+              ]
+            },
+            {
+              "file": "apps/admin/src/page/PageTwo/index.tsx",
+              "hash": "58f33a2bb2c3a44cefe98e37f3249379d04a1e47",
+              "deps": [
+                "npm:react-router-dom"
+              ]
+            },
+            {
+              "file": "apps/admin/src/polyfills.ts",
+              "hash": "53c485753e6e49fd2dac115c6e08dbfe99574861",
+              "deps": [
+                "npm:core-js",
+                "npm:regenerator-runtime"
+              ]
+            },
+            {
+              "file": "apps/admin/src/router/index.tsx",
+              "hash": "c984861443e9aab10c149d4062b0bfe67993f21e",
+              "deps": [
+                "npm:react-router-dom"
+              ]
+            },
+            {
+              "file": "apps/admin/src/router/routes.tsx",
+              "hash": "fadf88c014061b6ff86c15c11f7481b98aad3177"
+            },
+            {
+              "file": "apps/admin/src/styles.less",
+              "hash": "c495055e2e7fcd6ee97b7e18c14d2dd318236f0f"
+            },
+            {
+              "file": "apps/admin/tsconfig.app.json",
+              "hash": "63c2264840d096a08cd25e930caca4cf04a94d1e"
+            },
+            {
+              "file": "apps/admin/tsconfig.json",
+              "hash": "9657042e495d5b69d338455a91b5fcaae1bddff3"
+            },
+            {
+              "file": "apps/admin/tsconfig.spec.json",
+              "hash": "b8a950754b6152f8b12188ac8bd1d289ccbf57ce"
+            }
+          ]
+        }
+      },
+      "noe2e": {
+        "name": "noe2e",
+        "type": "app",
+        "data": {
+          "name": "noe2e",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "apps/noe2e/src",
+          "projectType": "application",
+          "targets": {
+            "build": {
+              "executor": "@nrwl/webpack:webpack",
+              "outputs": [
+                "{options.outputPath}"
+              ],
+              "defaultConfiguration": "production",
+              "options": {
+                "compiler": "babel",
+                "outputPath": "dist/apps/noe2e",
+                "index": "apps/noe2e/src/index.html",
+                "baseHref": "/",
+                "main": "apps/noe2e/src/main.tsx",
+                "polyfills": "apps/noe2e/src/polyfills.ts",
+                "tsConfig": "apps/noe2e/tsconfig.app.json",
+                "assets": [
+                  "apps/noe2e/src/favicon.ico",
+                  "apps/noe2e/src/assets"
+                ],
+                "styles": [
+                  "apps/noe2e/src/styles.less"
+                ],
+                "scripts": [],
+                "webpackConfig": "@nrwl/react/plugins/webpack"
+              },
+              "configurations": {
+                "development": {
+                  "extractLicenses": false,
+                  "optimization": false,
+                  "sourceMap": true,
+                  "vendorChunk": true
+                },
+                "production": {
+                  "fileReplacements": [
+                    {
+                      "replace": "apps/noe2e/src/environments/environment.ts",
+                      "with": "apps/noe2e/src/environments/environment.prod.ts"
+                    }
+                  ],
+                  "optimization": true,
+                  "outputHashing": "all",
+                  "sourceMap": false,
+                  "namedChunks": false,
+                  "extractLicenses": true,
+                  "vendorChunk": false
+                }
+              },
+              "dependsOn": [
+                "^build"
+              ],
+              "inputs": [
+                "production",
+                "^production"
+              ]
+            },
+            "serve": {
+              "executor": "@nrwl/webpack:dev-server",
+              "defaultConfiguration": "development",
+              "options": {
+                "buildTarget": "noe2e:build",
+                "hmr": true
+              },
+              "configurations": {
+                "development": {
+                  "buildTarget": "noe2e:build:development"
+                },
+                "production": {
+                  "buildTarget": "noe2e:build:production",
+                  "hmr": false
+                }
+              }
+            },
+            "lint": {
+              "executor": "@nrwl/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/noe2e/**/*.{ts,tsx,js,jsx}"
+                ]
+              },
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.eslintrc.json"
+              ]
+            },
+            "test": {
+              "executor": "@nrwl/jest:jest",
+              "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+              ],
+              "options": {
+                "jestConfig": "apps/noe2e/jest.config.ts",
+                "passWithNoTests": true
+              },
+              "inputs": [
+                "default",
+                "^production",
+                "{workspaceRoot}/jest.preset.js"
+              ]
+            }
+          },
+          "tags": [],
+          "root": "apps/noe2e",
+          "files": [
+            {
+              "file": "apps/noe2e/.babelrc",
+              "hash": "61641ec8ac3659e204441c80bb06defe323e3110"
+            },
+            {
+              "file": "apps/noe2e/.browserslistrc",
+              "hash": "f1d12df4faa25ab7f0f03196105e957395f609af"
+            },
+            {
+              "file": "apps/noe2e/.eslintrc.json",
+              "hash": "734ddaceea447738208c9519158ad6b3062f3929"
+            },
+            {
+              "file": "apps/noe2e/jest.config.ts",
+              "hash": "27d2d5346ff98dcc6dc615eb685fcf0f18a15b05"
+            },
+            {
+              "file": "apps/noe2e/project.json",
+              "hash": "a9597cef77cbc381d04674092b63c7c381e2f909"
+            },
+            {
+              "file": "apps/noe2e/src/app/app.module.less",
+              "hash": "7b88fbabf87b258bc8a0cc5b78800551134ca195"
+            },
+            {
+              "file": "apps/noe2e/src/app/app.spec.tsx",
+              "hash": "d18e5bfc9a605dbc9c4b054926b47275b60653fe",
+              "deps": [
+                "npm:@testing-library/react",
+                "npm:react-router-dom"
+              ]
+            },
+            {
+              "file": "apps/noe2e/src/app/app.tsx",
+              "hash": "7bbc54a08f3d1d5fba28e898d6ca6648f5d686b3",
+              "deps": [
+                "npm:react-router-dom"
+              ]
+            },
+            {
+              "file": "apps/noe2e/src/app/nx-welcome.tsx",
+              "hash": "0c538860a5a8262a70dba4aaef3e1574424690c8"
+            },
+            {
+              "file": "apps/noe2e/src/assets/.gitkeep",
+              "hash": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+            },
+            {
+              "file": "apps/noe2e/src/environments/environment.prod.ts",
+              "hash": "970e25bd7c0a80cf39c6b3c5b6e3406fbb672117"
+            },
+            {
+              "file": "apps/noe2e/src/environments/environment.ts",
+              "hash": "1904aee47b2fae8402a517a574bf5008a867198a"
+            },
+            {
+              "file": "apps/noe2e/src/favicon.ico",
+              "hash": "317ebcb2336e0833a22dddf0ab287849f26fda57"
+            },
+            {
+              "file": "apps/noe2e/src/index.html",
+              "hash": "f4dfd946e864a111a4b8cfef2d54b0fb2549b2e3"
+            },
+            {
+              "file": "apps/noe2e/src/main.tsx",
+              "hash": "af22effd2f6e508a5ad3de34dc5e5b0e0de7ae41",
+              "deps": [
+                "npm:react",
+                "npm:react-dom",
+                "npm:react-router-dom"
+              ]
+            },
+            {
+              "file": "apps/noe2e/src/polyfills.ts",
+              "hash": "53c485753e6e49fd2dac115c6e08dbfe99574861",
+              "deps": [
+                "npm:core-js",
+                "npm:regenerator-runtime"
+              ]
+            },
+            {
+              "file": "apps/noe2e/src/styles.less",
+              "hash": "90d4ee0072ce3fc41812f8af910219f9eea3c3de"
+            },
+            {
+              "file": "apps/noe2e/tsconfig.app.json",
+              "hash": "af84f21cfc8066d0302f5772b7c157e81d418617"
+            },
+            {
+              "file": "apps/noe2e/tsconfig.json",
+              "hash": "9657042e495d5b69d338455a91b5fcaae1bddff3"
+            },
+            {
+              "file": "apps/noe2e/tsconfig.spec.json",
+              "hash": "b8a950754b6152f8b12188ac8bd1d289ccbf57ce"
+            }
+          ]
+        }
+      },
+      "store": {
+        "name": "store",
+        "type": "app",
+        "data": {
+          "name": "store",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "apps/store/src",
+          "projectType": "application",
+          "targets": {
+            "env-dev": {
+              "executor": "nx:run-commands",
+              "options": {
+                "commands": [
+                  "nx serve store"
+                ],
+                "envFile": "apps/store/.env.dev",
+                "parallel": false
+              }
+            },
+            "env-test": {
+              "executor": "nx:run-commands",
+              "options": {
+                "commands": [
+                  "nx build store"
+                ],
+                "envFile": "apps/store/.env.test",
+                "parallel": false
+              }
+            },
+            "env-prod": {
+              "executor": "nx:run-commands",
+              "options": {
+                "commands": [
+                  "nx build store"
+                ],
+                "envFile": "apps/store/.env.prod",
+                "parallel": false
+              }
+            },
+            "build": {
+              "executor": "@nrwl/webpack:webpack",
+              "outputs": [
+                "{options.outputPath}"
+              ],
+              "defaultConfiguration": "production",
+              "options": {
+                "compiler": "babel",
+                "outputPath": "dist/apps/store",
+                "generateIndexHtml": true,
+                "index": "apps/store/src/index.html",
+                "baseHref": "/",
+                "main": "apps/store/src/main.tsx",
+                "polyfills": "apps/store/src/polyfills.ts",
+                "tsConfig": "apps/store/tsconfig.app.json",
+                "generatePackageJson": true,
+                "assets": [
+                  "apps/store/src/favicon.ico",
+                  "apps/store/src/assets",
+                  {
+                    "glob": "**/*",
+                    "input": "libs/shared/imagess/src",
+                    "output": "assets"
+                  }
+                ],
+                "styles": [
+                  "libs/shared/styles/index.less",
+                  "apps/store/src/styles.less"
+                ],
+                "scripts": [],
+                "webpackConfig": "apps/store/custom-webpack.config.js"
+              },
+              "configurations": {
+                "development": {
+                  "extractLicenses": false,
+                  "optimization": false,
+                  "sourceMap": true,
+                  "vendorChunk": true
+                },
+                "production": {
+                  "fileReplacements": [
+                    {
+                      "replace": "apps/store/src/environments/environment.ts",
+                      "with": "apps/store/src/environments/environment.prod.ts"
+                    }
+                  ],
+                  "optimization": true,
+                  "outputHashing": "all",
+                  "sourceMap": false,
+                  "namedChunks": false,
+                  "extractLicenses": true,
+                  "vendorChunk": false
+                }
+              },
+              "dependsOn": [
+                "^build"
+              ],
+              "inputs": [
+                "production",
+                "^production"
+              ]
+            },
+            "serve": {
+              "executor": "@nrwl/webpack:dev-server",
+              "defaultConfiguration": "development",
+              "liveReload": true,
+              "options": {
+                "buildTarget": "store:build",
+                "hmr": true
+              },
+              "configurations": {
+                "development": {
+                  "buildTarget": "store:build:development"
+                },
+                "production": {
+                  "buildTarget": "store:build:production",
+                  "hmr": false
+                }
+              }
+            },
+            "lint": {
+              "executor": "@nrwl/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/store/**/*.{ts,tsx,js,jsx}"
+                ]
+              },
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.eslintrc.json"
+              ]
+            },
+            "test": {
+              "executor": "@nrwl/jest:jest",
+              "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+              ],
+              "options": {
+                "jestConfig": "apps/store/jest.config.ts",
+                "passWithNoTests": true
+              },
+              "inputs": [
+                "default",
+                "^production",
+                "{workspaceRoot}/jest.preset.js"
+              ]
+            }
+          },
+          "tags": [],
+          "root": "apps/store",
+          "files": [
+            {
+              "file": "apps/store/.babelrc",
+              "hash": "61641ec8ac3659e204441c80bb06defe323e3110"
+            },
+            {
+              "file": "apps/store/.browserslistrc",
+              "hash": "9ea9255a4ed7a9ef3cf3b45c8d9b99c0530e3f05"
+            },
+            {
+              "file": "apps/store/.env.dev",
+              "hash": "6d69d5573ede4b885971afb727c189320aea8bbf"
+            },
+            {
+              "file": "apps/store/.env.prod",
+              "hash": "7cb948043a19c0cb26f9b513c510678f724601ca"
+            },
+            {
+              "file": "apps/store/.env.test",
+              "hash": "b2de8f9d2aff52289a977e765733dbc74220cdd6"
+            },
+            {
+              "file": "apps/store/.eslintrc.json",
+              "hash": "734ddaceea447738208c9519158ad6b3062f3929"
+            },
+            {
+              "file": "apps/store/custom-webpack.config.js",
+              "hash": "1b0d1337a256f562a775fd5365d5b48642a76fbe",
+              "deps": [
+                "npm:webpack-merge"
+              ]
+            },
+            {
+              "file": "apps/store/jest.config.ts",
+              "hash": "966d9ed8f62cbfc3dc8be7c092fc4b487bf20851"
+            },
+            {
+              "file": "apps/store/project.json",
+              "hash": "1fdff794556b66d6fe79f13643eb37294df9086c"
+            },
+            {
+              "file": "apps/store/src/apis/index.ts",
+              "hash": "c3a9c65bfc2fc8d986cf2fb8ff655bd3d5b73702"
+            },
+            {
+              "file": "apps/store/src/apis/user.ts",
+              "hash": "4b6e208ab79de15cca4a36825e23c86e0b9c4154",
+              "deps": [
+                "npm:axios"
+              ]
+            },
+            {
+              "file": "apps/store/src/app/app.module.less",
+              "hash": "7b88fbabf87b258bc8a0cc5b78800551134ca195"
+            },
+            {
+              "file": "apps/store/src/app/app.spec.tsx",
+              "hash": "3e80cf11052427df77b0230f8f57ef7638dffded",
+              "deps": [
+                "npm:@testing-library/react"
+              ]
+            },
+            {
+              "file": "apps/store/src/app/app.tsx",
+              "hash": "79757e690cd2658dc5ab08f01f1f4054d2035611",
+              "deps": [
+                "npm:react-router-dom",
+                "npm:react"
+              ]
+            },
+            {
+              "file": "apps/store/src/assets/.gitkeep",
+              "hash": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+            },
+            {
+              "file": "apps/store/src/assets/index.less",
+              "hash": "44b4421aea43ef0348b21494c37d2af5a0720fdb"
+            },
+            {
+              "file": "apps/store/src/components/APPImage/index.tsx",
+              "hash": "dd8cf6b391b9a1038edfd4b1e7df805c844cbfe1",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "apps/store/src/components/HaveAuth/index.tsx",
+              "hash": "1af2e1cc3b6f4703a1660a892f6d2f91dbc2f480",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "apps/store/src/components/MainLayout/index.tsx",
+              "hash": "02103bf906c31e4fa08c8920e30d7ced10e40836",
+              "deps": [
+                "npm:react",
+                "common-ui",
+                "npm:react-router-dom"
+              ]
+            },
+            {
+              "file": "apps/store/src/components/ModalTree/const.ts",
+              "hash": "e4f7d51ddb4492d73f316b9c6d724185ffe37e2a"
+            },
+            {
+              "file": "apps/store/src/components/ModalTree/index.module.less",
+              "hash": "76023001751bb60cb54eecae9a1ea784422e81d2"
+            },
+            {
+              "file": "apps/store/src/components/ModalTree/index.tsx",
+              "hash": "fd997b799e51b8488448c480ffed30011e9ebff8",
+              "deps": [
+                "npm:antd",
+                "npm:react",
+                "npm:classnames"
+              ]
+            },
+            {
+              "file": "apps/store/src/constants/index.ts",
+              "hash": "dbf29914ddb1dcef3c4992547a3bdb2eafc24800"
+            },
+            {
+              "file": "apps/store/src/constants/statusCode.ts",
+              "hash": "ae3d68dfe7d1bc56062a83f5c4ee505fc05f43f1"
+            },
+            {
+              "file": "apps/store/src/environments/environment.prod.ts",
+              "hash": "970e25bd7c0a80cf39c6b3c5b6e3406fbb672117"
+            },
+            {
+              "file": "apps/store/src/environments/environment.ts",
+              "hash": "1904aee47b2fae8402a517a574bf5008a867198a"
+            },
+            {
+              "file": "apps/store/src/favicon.ico",
+              "hash": "317ebcb2336e0833a22dddf0ab287849f26fda57"
+            },
+            {
+              "file": "apps/store/src/index.html",
+              "hash": "c2c925dba7ae363694b5b171b2f6afe4080ee5fc"
+            },
+            {
+              "file": "apps/store/src/main.tsx",
+              "hash": "2e40beeec8131a239f2c0f0b7153d62e53da9442",
+              "deps": [
+                "npm:react",
+                "npm:react-dom",
+                "npm:react-redux"
+              ]
+            },
+            {
+              "file": "apps/store/src/pages/CourseManage/CourseFeedback/index.module.less",
+              "hash": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+            },
+            {
+              "file": "apps/store/src/pages/CourseManage/CourseFeedback/index.tsx",
+              "hash": "0a1b58f1604e4268066d0edf7ae2658c13518ed6",
+              "deps": [
+                "npm:react",
+                "npm:classnames"
+              ]
+            },
+            {
+              "file": "apps/store/src/pages/CourseManage/CourseList/index.module.less",
+              "hash": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+            },
+            {
+              "file": "apps/store/src/pages/CourseManage/CourseList/index.tsx",
+              "hash": "fccc8e4840d990c1dda3602606c9e0c5252f3348",
+              "deps": [
+                "npm:react",
+                "auth",
+                "npm:classnames"
+              ]
+            },
+            {
+              "file": "apps/store/src/pages/Form/correspondence.ts",
+              "hash": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+            },
+            {
+              "file": "apps/store/src/pages/Form/Form.tsx",
+              "hash": "70aff1295e73b9088e7f132d7f31596a8d130034",
+              "deps": [
+                "npm:antd",
+                "npm:@ant-design/icons",
+                "npm:react",
+                "npm:classnames",
+                "npm:postcss"
+              ]
+            },
+            {
+              "file": "apps/store/src/pages/Form/index.module.less",
+              "hash": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+            },
+            {
+              "file": "apps/store/src/pages/Form/index.tsx",
+              "hash": "a1d962837afef983cbd16c87b8fc4d85441b2de9",
+              "deps": [
+                "npm:react",
+                "npm:classnames",
+                "npm:antd"
+              ]
+            },
+            {
+              "file": "apps/store/src/pages/Home/index.tsx",
+              "hash": "6fe4f1faa659a49db6695303ae5eb1423186735b",
+              "deps": [
+                "common-ui",
+                "products",
+                "npm:react-redux",
+                "npm:@eeo/international",
+                "npm:react"
+              ]
+            },
+            {
+              "file": "apps/store/src/pages/Todo/index.module.less",
+              "hash": "a1002a4ac8711c4877f1e7a9456aff856edda61f"
+            },
+            {
+              "file": "apps/store/src/pages/Todo/index.tsx",
+              "hash": "c65751dcbb743334660af77500c38dd6e2221b14",
+              "deps": [
+                "npm:classnames",
+                "npm:antd",
+                "npm:@ant-design/icons",
+                "common-ui"
+              ]
+            },
+            {
+              "file": "apps/store/src/pages/Todo/useInputState.ts",
+              "hash": "f375fe35b06d26f9c98a081a758bd81555d6d942",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "apps/store/src/pages/Todo/useTodoList.ts",
+              "hash": "d7c5db2291c30f3e81c33246d623e14131e51902",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "apps/store/src/pages/TodoReducer/index.module.less",
+              "hash": "a1002a4ac8711c4877f1e7a9456aff856edda61f"
+            },
+            {
+              "file": "apps/store/src/pages/TodoReducer/index.tsx",
+              "hash": "51d79260ee352c07ab53a3b079166d04ef879333",
+              "deps": [
+                "npm:classnames",
+                "npm:antd",
+                "npm:@ant-design/icons",
+                "common-ui"
+              ]
+            },
+            {
+              "file": "apps/store/src/pages/TodoReducer/useInputState.ts",
+              "hash": "f375fe35b06d26f9c98a081a758bd81555d6d942",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "apps/store/src/pages/Tree/const.ts",
+              "hash": "b26acf234520c9d3ff862016f7389278da65f1b0"
+            },
+            {
+              "file": "apps/store/src/pages/Tree/DeptAction.tsx",
+              "hash": "149fc2bd46bbdf7562e3d1aeb01694438b16b836",
+              "deps": [
+                "npm:antd",
+                "npm:react",
+                "npm:classnames"
+              ]
+            },
+            {
+              "file": "apps/store/src/pages/Tree/index.module.less",
+              "hash": "0528e9af121c79a801704c02225c64d0cf47416d"
+            },
+            {
+              "file": "apps/store/src/pages/Tree/index.tsx",
+              "hash": "0b6e6f444c8fe556a91ae917539d4aee2343a176",
+              "deps": [
+                "npm:antd",
+                "npm:react",
+                "npm:classnames",
+                "npm:@ant-design/icons"
+              ]
+            },
+            {
+              "file": "apps/store/src/pages/User/index.tsx",
+              "hash": "b050a5b79b52b67becf69f7031918c9dc9ea3004"
+            },
+            {
+              "file": "apps/store/src/polyfills.ts",
+              "hash": "53c485753e6e49fd2dac115c6e08dbfe99574861",
+              "deps": [
+                "npm:core-js",
+                "npm:regenerator-runtime"
+              ]
+            },
+            {
+              "file": "apps/store/src/routes/index.tsx",
+              "hash": "1309a30c0b4468549d3aac085eff9c96200f8ebd",
+              "deps": [
+                "npm:react-router-dom",
+                "npm:react"
+              ]
+            },
+            {
+              "file": "apps/store/src/routes/router/course.tsx",
+              "hash": "710020be7a0b1612280c8697d263cd23b2636e86"
+            },
+            {
+              "file": "apps/store/src/routes/router/form.tsx",
+              "hash": "0dc8143c77366efbcc4c4577df3de944d1f612ab"
+            },
+            {
+              "file": "apps/store/src/routes/router/todo.tsx",
+              "hash": "752102f57706157634fc7cd35890f6cb286cbaa5"
+            },
+            {
+              "file": "apps/store/src/routes/router/todoReducer.tsx",
+              "hash": "c8ab5bee9dd97c75d0398e9bd00e47d13680e876"
+            },
+            {
+              "file": "apps/store/src/routes/router/tree.tsx",
+              "hash": "c7a812a10167e840604bd6fd4fad0bff78134f1c"
+            },
+            {
+              "file": "apps/store/src/routes/routers.ts",
+              "hash": "cb67ca6798664b0469df3b0fb66fd34ee53b8419",
+              "deps": [
+                "common-ui"
+              ]
+            },
+            {
+              "file": "apps/store/src/store/counter/index.ts",
+              "hash": "b1065bba7ee36298123dba6e6ff6d070e62b7b78",
+              "deps": [
+                "npm:@reduxjs/toolkit"
+              ]
+            },
+            {
+              "file": "apps/store/src/store/index.ts",
+              "hash": "be3c355f4c17a9b92dc85dd9d65d4420688ee546",
+              "deps": [
+                "npm:@reduxjs/toolkit",
+                "npm:react-redux"
+              ]
+            },
+            {
+              "file": "apps/store/src/store/todo/index.ts",
+              "hash": "cd9cc0ef29462392e2a80dfb59b567dcd961edf5",
+              "deps": [
+                "npm:@reduxjs/toolkit"
+              ]
+            },
+            {
+              "file": "apps/store/src/store/user/index.ts",
+              "hash": "d19ee5518a1facb9eb150ca29c867b5effe59b36",
+              "deps": [
+                "npm:@reduxjs/toolkit"
+              ]
+            },
+            {
+              "file": "apps/store/src/styles.less",
+              "hash": "f31ddcd656fe094d555900f240ef050a4bb1e767"
+            },
+            {
+              "file": "apps/store/src/types/todo.ts",
+              "hash": "d46a10b36755bac63efcfa3057aabc7d7e606b52"
+            },
+            {
+              "file": "apps/store/src/types/user.ts",
+              "hash": "eae4c31be4e61add55eb1bcbb3b04c52001e7088"
+            },
+            {
+              "file": "apps/store/src/utils/request.ts",
+              "hash": "c74ba6255b97da016b07417e47b035cd06c01c38",
+              "deps": [
+                "npm:axios"
+              ]
+            },
+            {
+              "file": "apps/store/tsconfig.app.json",
+              "hash": "af84f21cfc8066d0302f5772b7c157e81d418617"
+            },
+            {
+              "file": "apps/store/tsconfig.json",
+              "hash": "b37e628a91b1add66ea787627ca94a2593130913"
+            },
+            {
+              "file": "apps/store/tsconfig.spec.json",
+              "hash": "b8a950754b6152f8b12188ac8bd1d289ccbf57ce"
+            }
+          ]
+        }
+      },
+      "users": {
+        "name": "users",
+        "type": "app",
+        "data": {
+          "name": "users",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "apps/users/src",
+          "projectType": "application",
+          "targets": {
+            "build": {
+              "executor": "@nrwl/webpack:webpack",
+              "outputs": [
+                "{options.outputPath}"
+              ],
+              "defaultConfiguration": "production",
+              "options": {
+                "compiler": "babel",
+                "outputPath": "dist/apps/users",
+                "index": "apps/users/src/index.html",
+                "baseHref": "/",
+                "main": "apps/users/src/main.tsx",
+                "polyfills": "apps/users/src/polyfills.ts",
+                "tsConfig": "apps/users/tsconfig.app.json",
+                "assets": [
+                  "apps/users/src/favicon.ico",
+                  "apps/users/src/assets"
+                ],
+                "styles": [
+                  "apps/users/src/styles.less"
+                ],
+                "scripts": [
+                  "aaa/1.js"
+                ],
+                "webpackConfig": "@nrwl/react/plugins/webpack",
+                "generatePackageJson": true
+              },
+              "configurations": {
+                "development": {
+                  "extractLicenses": false,
+                  "optimization": false,
+                  "sourceMap": true,
+                  "vendorChunk": true
+                },
+                "production": {
+                  "fileReplacements": [
+                    {
+                      "replace": "apps/users/src/environments/environment.ts",
+                      "with": "apps/users/src/environments/environment.prod.ts"
+                    }
+                  ],
+                  "optimization": true,
+                  "outputHashing": "all",
+                  "sourceMap": false,
+                  "namedChunks": false,
+                  "extractLicenses": true,
+                  "vendorChunk": false
+                }
+              },
+              "dependsOn": [
+                "^build"
+              ],
+              "inputs": [
+                "production",
+                "^production"
+              ]
+            },
+            "serve": {
+              "executor": "@nrwl/webpack:dev-server",
+              "defaultConfiguration": "development",
+              "options": {
+                "buildTarget": "users:build",
+                "hmr": true
+              },
+              "configurations": {
+                "development": {
+                  "buildTarget": "users:build:development"
+                },
+                "production": {
+                  "buildTarget": "users:build:production",
+                  "hmr": false
+                }
+              }
+            },
+            "lint": {
+              "executor": "@nrwl/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "apps/users/**/*.{ts,tsx,js,jsx}"
+                ]
+              },
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.eslintrc.json"
+              ]
+            },
+            "test": {
+              "executor": "@nrwl/jest:jest",
+              "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+              ],
+              "options": {
+                "jestConfig": "apps/users/jest.config.ts",
+                "passWithNoTests": true
+              },
+              "inputs": [
+                "default",
+                "^production",
+                "{workspaceRoot}/jest.preset.js"
+              ]
+            }
+          },
+          "tags": [],
+          "root": "apps/users",
+          "files": [
+            {
+              "file": "apps/users/.babelrc",
+              "hash": "61641ec8ac3659e204441c80bb06defe323e3110"
+            },
+            {
+              "file": "apps/users/.browserslistrc",
+              "hash": "f1d12df4faa25ab7f0f03196105e957395f609af"
+            },
+            {
+              "file": "apps/users/.eslintrc.json",
+              "hash": "734ddaceea447738208c9519158ad6b3062f3929"
+            },
+            {
+              "file": "apps/users/jest.config.ts",
+              "hash": "beae95a29b027fff9f535d2c16fea424cba79ef7"
+            },
+            {
+              "file": "apps/users/project.json",
+              "hash": "e3d770dedb0652db305d0277497fa392b251865d"
+            },
+            {
+              "file": "apps/users/src/app/abccomp/abccomp.module.less",
+              "hash": "45c2aa47e9879fa033c0d1f266154dd6106c2201"
+            },
+            {
+              "file": "apps/users/src/app/abccomp/abccomp.spec.tsx",
+              "hash": "5302a6012b5068e125432b41461eb0ca1aaf22e2",
+              "deps": [
+                "npm:@testing-library/react"
+              ]
+            },
+            {
+              "file": "apps/users/src/app/abccomp/abccomp.tsx",
+              "hash": "6c9fa497a39ab931b1ae78f6235bbcbc0ae1b894"
+            },
+            {
+              "file": "apps/users/src/app/app.module.less",
+              "hash": "7b88fbabf87b258bc8a0cc5b78800551134ca195"
+            },
+            {
+              "file": "apps/users/src/app/app.spec.tsx",
+              "hash": "32a71005294a9e1e7f2c8d5fda2c072b68d31279",
+              "deps": [
+                "npm:@testing-library/react"
+              ]
+            },
+            {
+              "file": "apps/users/src/app/app.tsx",
+              "hash": "6639dcdc755a9825156023da80d02211a2d815a5"
+            },
+            {
+              "file": "apps/users/src/app/button-abc/button-abc.module.less",
+              "hash": "45c2aa47e9879fa033c0d1f266154dd6106c2201"
+            },
+            {
+              "file": "apps/users/src/app/button-abc/button-abc.spec.tsx",
+              "hash": "ad22c09289d26730a1398d6ddfbfe9ed238461af",
+              "deps": [
+                "npm:@testing-library/react"
+              ]
+            },
+            {
+              "file": "apps/users/src/app/button-abc/button-abc.tsx",
+              "hash": "e8ed265286aa52101e513c65562c320bafab628d"
+            },
+            {
+              "file": "apps/users/src/app/button/button.module.less",
+              "hash": "45c2aa47e9879fa033c0d1f266154dd6106c2201"
+            },
+            {
+              "file": "apps/users/src/app/button/button.spec.tsx",
+              "hash": "add38a806b8fdea567af12b260d49a51b8aac31d",
+              "deps": [
+                "npm:@testing-library/react"
+              ]
+            },
+            {
+              "file": "apps/users/src/app/button/button.tsx",
+              "hash": "bb47c9fb69a4c61d95962a42087f383516719e53"
+            },
+            {
+              "file": "apps/users/src/app/my-component/my-component.module.less",
+              "hash": "45c2aa47e9879fa033c0d1f266154dd6106c2201"
+            },
+            {
+              "file": "apps/users/src/app/my-component/my-component.spec.tsx",
+              "hash": "ff613cc7816de93f8ebd4fd69744bbdad9c42049",
+              "deps": [
+                "npm:@testing-library/react"
+              ]
+            },
+            {
+              "file": "apps/users/src/app/my-component/my-component.tsx",
+              "hash": "fcdd16cee6fcaf82c15170722625af554ea4f45d"
+            },
+            {
+              "file": "apps/users/src/app/nx-welcome.tsx",
+              "hash": "0c538860a5a8262a70dba4aaef3e1574424690c8"
+            },
+            {
+              "file": "apps/users/src/assets/.gitkeep",
+              "hash": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+            },
+            {
+              "file": "apps/users/src/assets/index.less",
+              "hash": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+            },
+            {
+              "file": "apps/users/src/environments/environment.prod.ts",
+              "hash": "970e25bd7c0a80cf39c6b3c5b6e3406fbb672117"
+            },
+            {
+              "file": "apps/users/src/environments/environment.ts",
+              "hash": "1904aee47b2fae8402a517a574bf5008a867198a"
+            },
+            {
+              "file": "apps/users/src/favicon.ico",
+              "hash": "317ebcb2336e0833a22dddf0ab287849f26fda57"
+            },
+            {
+              "file": "apps/users/src/index.html",
+              "hash": "95f134564f78391854538765b9091e589156b0f9"
+            },
+            {
+              "file": "apps/users/src/main.tsx",
+              "hash": "38a1f1017d66f653a265b31cbdc8851c5cafaa40",
+              "deps": [
+                "npm:react",
+                "npm:react-dom"
+              ]
+            },
+            {
+              "file": "apps/users/src/polyfills.ts",
+              "hash": "53c485753e6e49fd2dac115c6e08dbfe99574861",
+              "deps": [
+                "npm:core-js",
+                "npm:regenerator-runtime"
+              ]
+            },
+            {
+              "file": "apps/users/src/styles.less",
+              "hash": "90e1582df5dd075ac39b34e994bf5935de0c2b81"
+            },
+            {
+              "file": "apps/users/tsconfig.app.json",
+              "hash": "af84f21cfc8066d0302f5772b7c157e81d418617"
+            },
+            {
+              "file": "apps/users/tsconfig.json",
+              "hash": "9657042e495d5b69d338455a91b5fcaae1bddff3"
+            },
+            {
+              "file": "apps/users/tsconfig.spec.json",
+              "hash": "b8a950754b6152f8b12188ac8bd1d289ccbf57ce"
+            }
+          ]
+        }
+      },
+      "auth": {
+        "name": "auth",
+        "type": "lib",
+        "data": {
+          "name": "auth",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "libs/auth/src",
+          "projectType": "library",
+          "tags": [],
+          "targets": {
+            "lint": {
+              "executor": "@nrwl/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "libs/auth/**/*.{ts,tsx,js,jsx}"
+                ]
+              },
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.eslintrc.json"
+              ]
+            },
+            "test": {
+              "executor": "@nrwl/jest:jest",
+              "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+              ],
+              "options": {
+                "jestConfig": "libs/auth/jest.config.ts",
+                "passWithNoTests": true
+              },
+              "inputs": [
+                "default",
+                "^production",
+                "{workspaceRoot}/jest.preset.js"
+              ]
+            }
+          },
+          "root": "libs/auth",
+          "files": [
+            {
+              "file": "libs/auth/.babelrc",
+              "hash": "ccae900be42788285eb6e1b3a2af4b81f56f14fe"
+            },
+            {
+              "file": "libs/auth/.eslintrc.json",
+              "hash": "734ddaceea447738208c9519158ad6b3062f3929"
+            },
+            {
+              "file": "libs/auth/jest.config.ts",
+              "hash": "11a78302f6714b1e0fe9fe1576bffd69bd736de3"
+            },
+            {
+              "file": "libs/auth/project.json",
+              "hash": "1d3baa993d5a606dc427c9dd2d288f2653c36eba"
+            },
+            {
+              "file": "libs/auth/README.md",
+              "hash": "910a0e968f9f038cf0b8c47114caafa34c204a85"
+            },
+            {
+              "file": "libs/auth/src/index.ts",
+              "hash": "6f06caaa8818d4854cf36b2238ca833bde1971b0"
+            },
+            {
+              "file": "libs/auth/src/lib/auth.module.less",
+              "hash": "45c2aa47e9879fa033c0d1f266154dd6106c2201"
+            },
+            {
+              "file": "libs/auth/src/lib/auth.spec.tsx",
+              "hash": "5af88a56e320bf2da8a84d159a2dc55aaf929241",
+              "deps": [
+                "npm:@testing-library/react"
+              ]
+            },
+            {
+              "file": "libs/auth/src/lib/auth.tsx",
+              "hash": "ed08151bedce56f6e547f857cb66a89a70c651a2",
+              "deps": [
+                "npm:antd"
+              ]
+            },
+            {
+              "file": "libs/auth/tsconfig.json",
+              "hash": "4c089585ed6b0a3c4767aee6a136bb6f47cad2b6"
+            },
+            {
+              "file": "libs/auth/tsconfig.lib.json",
+              "hash": "af84f21cfc8066d0302f5772b7c157e81d418617"
+            },
+            {
+              "file": "libs/auth/tsconfig.spec.json",
+              "hash": "ff08addd60ff581234ec9423d2bb90f31d8166e8"
+            }
+          ]
+        }
+      },
+      "tree": {
+        "name": "tree",
+        "type": "lib",
+        "data": {
+          "name": "tree",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "sourceRoot": "libs/tree/src",
+          "projectType": "library",
+          "tags": [],
+          "targets": {
+            "lint": {
+              "executor": "@nrwl/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "libs/tree/**/*.{ts,tsx,js,jsx}"
+                ]
+              },
+              "inputs": [
+                "default",
+                "{workspaceRoot}/.eslintrc.json"
+              ]
+            },
+            "test": {
+              "executor": "@nrwl/jest:jest",
+              "outputs": [
+                "{workspaceRoot}/coverage/{projectRoot}"
+              ],
+              "options": {
+                "jestConfig": "libs/tree/jest.config.ts",
+                "passWithNoTests": true
+              },
+              "inputs": [
+                "default",
+                "^production",
+                "{workspaceRoot}/jest.preset.js"
+              ]
+            }
+          },
+          "root": "libs/tree",
+          "files": [
+            {
+              "file": "libs/tree/.babelrc",
+              "hash": "ccae900be42788285eb6e1b3a2af4b81f56f14fe"
+            },
+            {
+              "file": "libs/tree/.eslintrc.json",
+              "hash": "734ddaceea447738208c9519158ad6b3062f3929"
+            },
+            {
+              "file": "libs/tree/jest.config.ts",
+              "hash": "c964f821b77dcc2a1e4954475522f39676f7de8e"
+            },
+            {
+              "file": "libs/tree/project.json",
+              "hash": "eeeb2ac8cdde76b258d6140a43584e4772bfd7e8"
+            },
+            {
+              "file": "libs/tree/README.md",
+              "hash": "e9ad118bdf657e71079a70b40dbe643911cdcd9a"
+            },
+            {
+              "file": "libs/tree/src/index.ts",
+              "hash": "fe0c0f72aaaf0553bde2e8a1588ecd530bd1bbc8"
+            },
+            {
+              "file": "libs/tree/src/lib/header-a/header-a.module.less",
+              "hash": "45c2aa47e9879fa033c0d1f266154dd6106c2201"
+            },
+            {
+              "file": "libs/tree/src/lib/header-a/header-a.spec.tsx",
+              "hash": "25701455f46173f5d6b9cc7e49f1596ba6cb325d",
+              "deps": [
+                "npm:@testing-library/react"
+              ]
+            },
+            {
+              "file": "libs/tree/src/lib/header-a/header-a.tsx",
+              "hash": "ae62673538d9cf29a365a6dd10b02c71dcf9eb1f"
+            },
+            {
+              "file": "libs/tree/src/lib/tree.module.less",
+              "hash": "45c2aa47e9879fa033c0d1f266154dd6106c2201"
+            },
+            {
+              "file": "libs/tree/src/lib/tree.spec.tsx",
+              "hash": "696a18133f0e6ddf0d1b53fe456d85d0b5801832",
+              "deps": [
+                "npm:@testing-library/react"
+              ]
+            },
+            {
+              "file": "libs/tree/src/lib/tree.tsx",
+              "hash": "e4c96bb57e340e29295fafd092272f8f8af1431b"
+            },
+            {
+              "file": "libs/tree/tsconfig.json",
+              "hash": "4c089585ed6b0a3c4767aee6a136bb6f47cad2b6"
+            },
+            {
+              "file": "libs/tree/tsconfig.lib.json",
+              "hash": "af84f21cfc8066d0302f5772b7c157e81d418617"
+            },
+            {
+              "file": "libs/tree/tsconfig.spec.json",
+              "hash": "ff08addd60ff581234ec9423d2bb90f31d8166e8"
+            }
+          ]
+        }
+      }
+    },
+    "dependencies": {
+      "shared-imagess": [],
+      "styles": [],
+      "common-ui": [],
+      "shared-ui": [],
+      "products": [],
+      "admin": [],
+      "noe2e": [],
+      "store": [
+        {
+          "source": "store",
+          "target": "common-ui",
+          "type": "static"
+        },
+        {
+          "source": "store",
+          "target": "auth",
+          "type": "static"
+        },
+        {
+          "source": "store",
+          "target": "products",
+          "type": "static"
+        }
+      ],
+      "users": [],
+      "auth": [],
+      "tree": []
+    }
+  },
+  "affectedProjects": [],
+  "criticalPath": []
+}

@@ -15,8 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@integrated-react-test/auth": ["libs/auth/src/index.ts"],
       "@integrated-react-test/common-ui": ["libs/common-ui/src/index.ts"],
       "@integrated-react-test/products": ["libs/products/src/index.ts"],
+      "@integrated-react-test/shared-ui": ["libs/shared-ui/src/index.ts"],
       "@integrated-react-test/shared/images": [
         "libs/shared/images/src/index.ts"
       ],
@@ -25,7 +27,8 @@
       ],
       "@integrated-react-test/shared/my-feature-lib": [
         "libs/shared/my-feature-lib/src/index.ts"
-      ]
+      ],
+      "@integrated-react-test/tree": ["libs/tree/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -14,15 +14,15 @@ type Props = {
 }
 
 const Index: React.FC<Props> = (props) => {
-  const { permissionIds, userInfo } = useAppSelector((state) => state.user)
+  const { permissionIds, isAdmin } = useAppSelector((state) => state.user)
 
   const { permissionId, emptyComp = '' } = props
-  if (userInfo) {
+  if (isAdmin) {
     return <>props.children</>
   }
   // 单个权限
   if (!Array.isArray(permissionId)) {
-    const haveAuth = userInfo || permissionIds.includes(permissionId)
+    const haveAuth = isAdmin || permissionIds.includes(permissionId)
     return haveAuth ? <>{props.children}</> : <>emptyComp</>
   }
   // 多个权限传数组
@@ -46,8 +46,8 @@ type HaveAuth = (permissionId: string) => boolean
 
 export const haveAuth: HaveAuth = (permissionId) => {
   const { user } = store.getState()
-  const { permissionIds, userInfo } = user
-  return !!userInfo || permissionIds.includes(permissionId)
+  const { permissionIds, isAdmin } = user
+  return !!isAdmin || permissionIds.includes(permissionId)
 }
 
 export default Index

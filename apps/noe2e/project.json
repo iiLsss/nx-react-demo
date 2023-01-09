@@ -1,0 +1,81 @@
+{
+  "name": "noe2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/noe2e/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/noe2e",
+        "index": "apps/noe2e/src/index.html",
+        "baseHref": "/",
+        "main": "apps/noe2e/src/main.tsx",
+        "polyfills": "apps/noe2e/src/polyfills.ts",
+        "tsConfig": "apps/noe2e/tsconfig.app.json",
+        "assets": ["apps/noe2e/src/favicon.ico", "apps/noe2e/src/assets"],
+        "styles": ["apps/noe2e/src/styles.less"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/noe2e/src/environments/environment.ts",
+              "with": "apps/noe2e/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/webpack:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "noe2e:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "noe2e:build:development"
+        },
+        "production": {
+          "buildTarget": "noe2e:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/noe2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/noe2e/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

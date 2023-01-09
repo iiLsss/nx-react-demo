@@ -19,7 +19,8 @@
         "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"],
         "styles": ["apps/admin/src/styles.less"],
         "scripts": [],
-        "webpackConfig": "apps/admin/custom-webpack.config.js"
+        "webpackConfig": "apps/admin/custom-webpack.config.js",
+        "generatePackageJson": true
       },
       "configurations": {
         "development": {

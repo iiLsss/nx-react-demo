@@ -3,16 +3,16 @@ import CourseList from '../../pages/CourseManage/CourseList'
 
 const COURSE_ROUTE = {
   path: 'course',
-  title: '课程管理',
+  title: '一级菜单',
   children: [
     {
       path: 'list',
-      title: '列表',
+      title: '🎩',
       element: <CourseList />,
     },
     {
       path: 'feedback',
-      title: '反馈',
+      title: '🎧',
       element: <CourseFeedback />,
     },
   ],

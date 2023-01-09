@@ -1,5 +1,6 @@
 import { Banner, Button, Space } from '@integrated-react-test/common-ui'
 import { exampleProducts } from '@integrated-react-test/products'
+
 import type { RootState } from '../../store'
 import { useSelector, useDispatch } from 'react-redux'
 import { counterActions } from '../../store/counter'
