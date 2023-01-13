@@ -1,5 +1,5 @@
 import styles from './auth.module.less'
-import { Modal, Tree } from 'antd'
+import { Tree } from 'antd'
 import type { DataNode, TreeProps } from 'antd/es/tree'
 /* eslint-disable-next-line */
 export interface AuthProps {}

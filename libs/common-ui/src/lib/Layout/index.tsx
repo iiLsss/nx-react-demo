@@ -7,9 +7,7 @@ import style from './index.module.less'
 import { FC, PropsWithChildren } from 'react'
 
 const cx = classnames.bind(style)
-type Props = PropsWithChildren & {
-  sider: SiderType[]
-}
+type Props = PropsWithChildren<{ sider: SiderType[] }>
 
 export const MainLayout: FC<Props> = (props) => {
   return (

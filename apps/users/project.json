@@ -18,7 +18,7 @@
         "tsConfig": "apps/users/tsconfig.app.json",
         "assets": ["apps/users/src/favicon.ico", "apps/users/src/assets"],
         "styles": ["apps/users/src/styles.less"],
-        "scripts": ["aaa/1.js"],
+        "scripts": [],
         "webpackConfig": "@nrwl/react/plugins/webpack",
         "generatePackageJson": true
       },

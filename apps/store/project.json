@@ -61,7 +61,9 @@
           "libs/shared/styles/index.less",
           "apps/store/src/styles.less"
         ],
-        
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/shared/styles/src"]
+        },
         "scripts": [],
         "webpackConfig": "apps/store/custom-webpack.config.js"
       },

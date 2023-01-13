@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react'
+import React from 'react'
 import { useAppSelector } from '../../store'
 import { store } from '../../store/index'
 
