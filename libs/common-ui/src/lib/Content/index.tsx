@@ -1,9 +1,9 @@
 import { Breadcrumb, Layout } from 'antd'
 import { FC } from 'react'
-
+import { REQUEST_STATUS } from '@integrated-react-test/shared/types'
 const { Content } = Layout
 
-const App: FC = (props) => (
+const App: FC<{ children: React.ReactNode }> = (props) => (
   <Layout style={{ padding: '24px 24px' }}>
     {/* <Breadcrumb style={{ margin: '16px 0' }}>
       <Breadcrumb.Item>Home</Breadcrumb.Item>

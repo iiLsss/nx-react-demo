@@ -28,6 +28,7 @@
       "@integrated-react-test/shared/my-feature-lib": [
         "libs/shared/my-feature-lib/src/index.ts"
       ],
+      "@integrated-react-test/shared/types": ["libs/shared/types/src/index.ts"],
       "@integrated-react-test/tree": ["libs/tree/src/index.ts"]
     }
   },
